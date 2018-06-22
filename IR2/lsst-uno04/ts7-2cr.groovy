@@ -149,7 +149,7 @@ ge to be broadcast, which can be used to update the trending database or to upda
                    devcName:"PDU15", hwChan:0, type:"OUTLET", subtype:"NET-SWITCH (ON)",
                    limitLo:0.9, limitHi:1.1)
 
-    PDU15_8State  (Channel, description:"VATValve state", format:".0f",
+    VATvalveState (Channel, description:"VATValve state", format:".0f",
                    devcName:"PDU15", hwChan:0, type:"OUTLET", subtype:TS7Outlets.VACUUMVALVE.getOutletName(),
                    limitLo:0.9, limitHi:1.1)
 
@@ -173,11 +173,11 @@ ge to be broadcast, which can be used to update the trending database or to upda
                    devcName:"PDU20", hwChan:0, type:"OUTLET", subtype:TS7Outlets.CRYOPLATEREFRIGERATOR.getOutletName(),
                    limitLo:0.9, limitHi:1.1)
 
-    VATvalveState  (Channel, description:"XED-Power state", format:".0f",
+    XEDPowerState  (Channel, description:"XED-Power state", format:".0f",
                    devcName:"PDU20", hwChan:0, type:"OUTLET", subtype:TS7Outlets.XEDPOWER.getOutletName(),
                    limitLo:0.9, limitHi:1.1)
 
-    PDU20_5State  (Channel, description:"XED-Control state", format:".0f",
+    XEDCntrlState (Channel, description:"XED-Control state", format:".0f",
                    devcName:"PDU20", hwChan:0, type:"OUTLET", subtype:TS7Outlets.XEDCONTROL.getOutletName(),
                    limitLo:0.9, limitHi:1.1)
 
