@@ -10,8 +10,14 @@ import org.lsst.ccs.drivers.reb.SlowAdcs
 import org.lsst.ccs.monitor.Channel
 import org.lsst.ccs.monitor.Page
 import org.lsst.ccs.drivers.reb.sim.ClientFactorySimulation
+import org.lsst.ccs.daq.utilities.FitsService
 
-taskConfig = ["monitor-update/taskPeriodMillis":1000,"monitor-publish/taskPeriodMillis":10000]
+taskConfig = ["monitor-update/taskPeriodMillis":1000,"monitor-publish/taskPeriodMillis":10000,
+              "agentStatusAggregatorService/patternConfigList":[
+              "[pattern:.*,predicate:[agentName:cr-raft]]",
+              "[pattern:.*,predicate:[agentName:cr-rebps]]",
+              "[pattern:.*,predicate:[agentName:ts7-2cr]]"]
+             ]
 
 Properties props = BootstrapResourceUtils.getBootstrapSystemProperties()
 def runMode = props.getProperty("org.lsst.ccs.run.mode", "normal")
@@ -26,6 +32,11 @@ builder.main (RaftsMain, nodeTags:taskConfig) {
 
     def wreb = "WREB"
     def greb = "GREB"
+
+//    fitsService (FitsService, 
+//        headerFilesList:["primary", "extended", "cr-primary:primary", "cr-reb_cond:reb_cond", "cr-test_cond:test_cond"]            
+//    )
+ 
 
     "$wreb" (REBDevice, hdwType: "daq2", id: 4 * raftId, ifcName: partition, ccdMask: 1, clientFactory:factory) {
 
