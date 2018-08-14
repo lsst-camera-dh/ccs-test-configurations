@@ -7,22 +7,22 @@ ROOMTEMP    Float   ${StatusAggregator.ts7-2cr/roomtemperature}       Room Tempe
 DWRPRESS    Float   ${StatusAggregator.ts7-2cr/vqmpressure}           Dewar internal pressure level
 SRCTYPE     String  ${StatusAggregator.ts7-2cr/TSState/srctype}       Type of light source used
 SRCMODL     String  ${StatusAggregator.ts7-2cr/TSState/srctype}       Manufacturer’s Model number
-SRCPWR      Float   ${StatusAggregator.ts7-2cr/lamppower}             Light source power
+SRCPWR      Float   ${StatusAggregator.ts8-bench/Lamp/lamppower}             Light source power
 ND_FILT     Integer ${StatusAggregator.ts7-2cr/TSState/fltpos}        ND Filter after lamp (if any)
 FILTER      String  ${StatusAggregator.ts7-2cr/TSState/filter}        Optical Filter used
-FILTRPOS    Integer ${StatusAggregator.ts8-bench/filter1position}        Filter position
+FILTRPOS    Integer ${StatusAggregator.ts8-bench/Monochromator/filter1position}        Filter position
 MONOMODL    String  ${StatusAggregator.ts8-bench/TSState/monotype}      Monochromator model number
-MONOPOS     Integer ${StatusAggregator.ts8-bench/monochromgrating}      Monochromator grating turret position
-MONOGRAT    Integer ${StatusAggregator.ts8-bench/monochromgrating}      Monochromator grating in use
+MONOPOS     Integer ${StatusAggregator.ts8-bench/Monochromator/monochromgrating}      Monochromator grating turret position
+MONOGRAT    Integer ${StatusAggregator.ts8-bench/Monochromator/monochromgrating}      Monochromator grating in use
 MONOWL      Float   ${MonochromatorWavelength}                                                              Monochromator WL setting
-MONOSTEP    Integer ${StatusAggregator.ts8-bench/monochromstep}        Monochromator step
-MONOSLT1    Float  ${StatusAggregator.ts8-bench/monochromatorslit1}      Monochromator slit width 1
-MONOSLT2    Float  ${StatusAggregator.ts8-bench/monochromatorslit2}      Monochromator slit width 2
-MONOWAVE    Float  ${StatusAggregator.ts8-bench/monochromatorwavelength} Monochromator wavelength
+MONOSTEP    Integer ${StatusAggregator.ts8-bench/Monochromator/monochromstep}        Monochromator step
+MONOSLT1    Float  ${StatusAggregator.ts8-bench/Monochromator/monochromatorslit1}      Monochromator slit width 1
+MONOSLT2    Float  ${StatusAggregator.ts8-bench/Monochromator/monochromatorslit2}      Monochromator slit width 2
+MONOWAVE    Float  ${StatusAggregator.ts8-bench/Monochromator/monochromatorwavelength} Monochromator wavelength
 PD_MODEL    String  ${StatusAggregator.ts7-2cr/TSState/pdtype}        Monitor Photodiode model number
 PD_SER      String  ${PhotodiodeSignal}                                                                     Monitor Photodiode serial number
-LAMPCURR    Float   ${StatusAggregator.ts8-bench/lampcurrent}          Lamp current (A)
-LAMPPWR     Float   ${StatusAggregator.ts8-bench/lamppower}             Lamp power (W)
+LAMPCURR    Float   ${StatusAggregator.ts8-bench/Lamp/lampcurrent}          Lamp current (A)
+LAMPPWR     Float   ${StatusAggregator.ts8-bench/Lamp/lamppower}             Lamp power (W)
 # TS7-2CR Parameters
 COLDTEMP    Float   ${StatusAggregator.ts7-2cr/ColdPlate}             Cold Plate Temperature (deg C)
 CRYOTEMP    Float   ${StatusAggregator.ts7-2cr/CryoPlate}             Cryo Plate Temperature (deg C)
