@@ -33,9 +33,9 @@ builder.main (RaftsMain, nodeTags:taskConfig) {
     def wreb = "WREB"
     def greb = "GREB"
 
-//    fitsService (FitsService, 
-//        headerFilesList:["primary", "extended", "cr-primary:primary", "cr-reb_cond:reb_cond", "cr-test_cond:test_cond"]            
-//    )
+    fitsService (FitsService, 
+        headerFilesList:["primary", "extended", "cr-primary:primary", "cr-reb_cond:reb_cond", "cr-test_cond:test_cond"]            
+    )
  
 
     "$wreb" (REBDevice, hdwType: "daq2", id: 4 * raftId, ifcName: partition, ccdMask: 1, clientFactory:factory) {
