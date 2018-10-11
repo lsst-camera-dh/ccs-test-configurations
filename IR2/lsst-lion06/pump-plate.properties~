@@ -1,0 +1,18 @@
+#********  TurboPump/activeStopMode
+#** Active-Stop mode <true|false>, settable only if pump is stopped
+#** type : boolean (example : true)
+#********
+TurboPump/activeStopMode = true
+
+#********  TurboPump/devcId
+#** 
+#** type : String
+#********
+TurboPump/devcId = /dev/ttyUSB1
+
+#********  TurboPump/softStartMode
+#** Soft-Start mode <true|false>, settable only if pump is stopped
+#** type : boolean (example : true)
+#********
+TurboPump/softStartMode = true
+
