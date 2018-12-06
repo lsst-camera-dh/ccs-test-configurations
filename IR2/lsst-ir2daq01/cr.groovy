@@ -35,7 +35,7 @@ builder.main (RaftsMain, nodeTags:taskConfig) {
 
     "$wreb" (REBDevice, hdwType: "daq2", id: 4 * raftId, ifcName: partition, ccdMask: 1, clientFactory:factory) {
 
-        fitsService (${wreb}.FitsService, 
+        "${wreb}.fitsService" (FitsService, 
     	    headerFilesList:["primary", "extended", "cr-primary:primary", "cr-reb_cond:reb_cond", "cr-test_cond:test_cond"]      
         )
 
@@ -52,7 +52,7 @@ builder.main (RaftsMain, nodeTags:taskConfig) {
 
     "$greb" (REBDevice, hdwType: "daq2", id: 4 * raftId + 1, ifcName: partition, ccdMask: 3, clientFactory:factory) {
 
-        fitsService (${greb}.FitsService, 
+        "${greb}.fitsService" (FitsService, 
     	    headerFilesList:["primary", "extended", "cr-primary:primary", "cr-reb_cond:reb_cond", "cr-test_cond:test_cond"]      
         )
 
