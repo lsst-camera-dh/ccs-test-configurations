@@ -10,6 +10,8 @@ import org.lsst.ccs.drivers.reb.*;
 import org.lsst.ccs.drivers.reb.sim.*;
 import org.lsst.ccs.monitor.*;
 import org.lsst.ccs.subsystem.rafts.alerts.RaftAlert;
+import org.lsst.ccs.daq.utilities.FitsService
+
 
 CCSBuilder builder = ["focal-plane"]
 
@@ -23,12 +25,18 @@ Properties props = BootstrapResourceUtils.getBootstrapSystemProperties()
 def runMode = props.getProperty("org.lsst.ccs.run.mode","normal");
 System.out.println("Building FocalPlane subsystem in run mode: "+runMode);
 
-taskConfig = ["monitor-update/taskPeriodMillis":1000,"monitor-publish/taskPeriodMillis":10000]
+taskConfig = ["monitor-update/taskPeriodMillis":1000,"monitor-publish/taskPeriodMillis":10000,
+              "agentStatusAggregatorService/patternConfigList":[
+              "[pattern:.*,predicate:[agentName:focal-plane]]",
+              "[pattern:.*,predicate:[agentName:bot-motorplatform]]",
+              "[pattern:.*,predicate:[agentName:ccob-subsystem]]",
+              "[pattern:.*,predicate:[agentName:fp-rebps]]"]
+             ]
 
 def partition = props.getProperty("org.lsst.ccs.raft.partition","2raft")
 
 builder.
-    "main" (FocalPlaneSubsystem, geometry:focalPlane) {
+    "main" (FocalPlaneSubsystem, geometry:focalPlane, nodeTags:taskConfig) {
 
         clientFactory (runMode.equals("simulation") ? ClientFactorySimulation : ClientFactory)
 
@@ -57,10 +65,15 @@ builder.
             System.out.println("Using Reb Id "+rebCount+" "+reb);
             
             
-            "$reb" (REBDevice, hdwType:"daq2", id:rebCount, ifcName:partition, ccdMask:7) {
+            "$reb" (REBDevice, hdwType:"daq2", id:rebCount, ifcName:partition, ccdMask:7, ccdType:"ITL") {
 
                 //"DAC" (DacControl, raw: true, version: 2)   // Science raft REBs, raw DAC values
                 "DAC" (DacControl) // All REBs, physical values
+
+                fitsService (FitsService, 
+                   headerFilesList:["fp-primary:primary", "extended", "fp-reb_cond", "fp-test_cond"],
+                   replacements:["$reb".toString()+":REB"]
+                )
 
                 for (int j = 0; j < 6; j++) {
                     def apc = "ASPIC$j"
@@ -121,7 +134,7 @@ builder.
 
 
                 for (CCD ccdGeometry : rebGeometry.getChildrenList() ) {
-                    def js = ccdGeometry.getSerialPosition();
+                    int js = ccdGeometry.getSerialPosition();
                     def current_name = ccdGeometry.getName()+"/Temp";
                     current_name = current_name.replace("Sen","S");
                     "${current_name}" (Channel, description: "${current_name} temperature", units: "\u00b0C",
