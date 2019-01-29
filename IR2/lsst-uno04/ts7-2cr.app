@@ -1,4 +1,3 @@
-org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
-org.lsst.ccs.application.description=Run Teststand-7 subsystem on a corner raft
-org.lsst.ccs.application.args=--description ts7-slac --configuration ""
-org.lsst.ccs.raft.type="corner"
+org.lsst.ccs.application.extends=ts7-slac
+org.lsst.ccs.application.args=--description ts7-slac --configuration "" --alias ts7-2cr
+org.lsst.ccs.raft.type=corner

@@ -3,6 +3,7 @@ import org.lsst.ccs.subsystem.teststand.data.*;
 import org.lsst.ccs.subsystem.teststand.*;
 import org.lsst.ccs.subsystem.teststand.alerts.TS7Alerts;
 import org.lsst.ccs.bootstrap.BootstrapResourceUtils;
+import org.lsst.ccs.subsystem.common.devices.power.distribution.*;
 
 import org.lsst.ccs.monitor.Alarm;
 import org.lsst.ccs.monitor.Line;
@@ -14,11 +15,11 @@ Properties props = BootstrapResourceUtils.getBootstrapSystemProperties()
 def runMode = props.getProperty("org.lsst.ccs.run.mode","normal");
 
 Class cryoClass = Class.forName("org.lsst.ccs.subsystem.teststand.CryoCon24c" + (runMode.equals("simulation") ? "Sim" : "") + "Device");
-Class pduClass = Class.forName("org.lsst.ccs.subsystem.teststand.APC7900" + (runMode.equals("simulation") ? "Sim" : "") + "Device");
+Class pduClass = Class.forName("org.lsst.ccs.subsystem.common.devices.power.distribution.APC7900" + (runMode.equals("simulation") ? "Sim" : "") + "Device");
 Class upsClass = Class.forName("org.lsst.ccs.subsystem.teststand.AP9630UPS" + (runMode.equals("simulation") ? "Sim" : "") + "Device");
-Class turboClass = Class.forName("org.lsst.ccs.subsystem.teststand.TwisTorr84" + "Device");
+Class turboClass = Class.forName("org.lsst.ccs.subsystem.common.devices.turbopump.TwisTorr84" + "Device");
 
-builder.main (TS7, rebPsSubsystem:"ts7-rebps",
+builder.main (TS7, rebPsSubsystem:"cr-rebps",
                     coldPlate1:ref("ColdPlate"),
                     cryoPlate:ref("CryoPlate"), pressureDevice:ref("vqmpressure") ) {
 
@@ -32,7 +33,7 @@ builder.main (TS7, rebPsSubsystem:"ts7-rebps",
 
     Turbo  (turboClass, devcId:"", lowSpeedMode:false, waterCooling:false,
             ventValveByCmnd:true, interlockType:true, softStartMode:true,
-            activeStopMode:true)
+            activeStopMode:true, model304:false)
 
     VQMonitor (GPVacMon835Device, serialdev:"/dev/serial/by-id/usb-Brooks_Automation_Inc._Granville-Phillips_VQM_835_835A0516-if00")
 
@@ -81,12 +82,12 @@ ge to be broadcast, which can be used to update the trending database or to upda
 */
     ColdPlate  (Channel, description:"Cryogenics temperature A", units:"\u00b0C",
              devcName:"Cryo", hwChan:CryoCon24cDevice.CHAN_TEMP_A,
-             checkLo:"alarm", limitLo:-135, dbandLo:35.0, alarmLo:"AlarmColdLowTempLimit",
+             checkLo:"alarm", limitLo:-50, dbandLo:5.0, alarmLo:"AlarmColdLowTempLimit",
              checkHi:"alarm", limitHi:30, dbandHi:35.0, alarmHi:"AlarmColdHighTempLimit")
 
-    CryoPlate  (Channel, description:"Cryogenics temperature D", units:"\u00b0C",
+    CryoPlate  (Channel, description:"Cryogenics temperature B", units:"\u00b0C",
              devcName:"Cryo", hwChan:CryoCon24cDevice.CHAN_TEMP_B,
-             limitLo:-135.0, dbandLo:35.0, checkLo:"alarm", alarmLo:"AlarmCryoLowTempLimit",
+             limitLo:-135.0, dbandLo:10.0, checkLo:"alarm", alarmLo:"AlarmCryoLowTempLimit",
              checkHi:"alarm", limitHi:30.0, dbandHi:35.0, alarmHi:"AlarmCryoHighTempLimit")
 
     htrread1  (Channel, description:"Cryogenics heater loop 1 % power", units:"%",
