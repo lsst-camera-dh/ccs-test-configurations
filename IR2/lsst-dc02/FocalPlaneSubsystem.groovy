@@ -29,7 +29,7 @@ taskConfig = ["monitor-update/taskPeriodMillis":1000,"monitor-publish/taskPeriod
               "agentStatusAggregatorService/patternConfigList":[
               "[pattern:.*,predicate:[agentName:focal-plane]]",
               "[pattern:.*,predicate:[agentName:bot-motorplatform]]",
-              "[pattern:.*,predicate:[agentName:ccob-subsystem]]",
+              "[pattern:.*,predicate:[agentName:ccob]]",
               "[pattern:.*,predicate:[agentName:fp-rebps]]"]
              ]
 

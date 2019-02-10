@@ -27,7 +27,8 @@ CCDTEMP     Float   ${MeasuredTemperature}      Measured temperature (deg C)
 EXPTIME     Float   ${ExposureTime}             Exposure Time in Seconds
 DARKTIME    Float   ${DarkTime}                 Dark Time in Seconds (see TSEIA-91)
 FILENAME    String  ${OriginalFileName}         Original name of the file
-RUNNUM      Integer ${RunNumber}                The Run Number (when running under eTraveler)
+# Note -- eTraveler run numbers are not always numbers
+RUNNUM      String  ${RunNumber}                The Run Number (when running under eTraveler)
 # Elements from the image name, see also TSEIA-79
 OBSID       String  ${ImageName}                The image name or obs-id
 TELCODE     String  ${ImageSource}              The "code" for MainCamera
@@ -35,12 +36,16 @@ CONTRLLR    String  ${ImageController}          The controller (e.g. O for OCS, 
 DAYOBS      String  ${ImageDate}                The observation day as defined in the image name 
 SEQNUM      Integer ${ImageNumber}              The sequence number from the image name
 # CCOB items (do they belong in primary header -- probably not)
-TEMPLED1    Float   ${StatusAggregator.ccob-subsystem/tempLed1}                 CCOB daughter board temperature, front
-TEMPLED2    Float   ${StatusAggregator.ccob-subsystem/tempLed2}                 CCOB daughter board temperature, back
-TEMPSPH     Float   ${StatusAggregator.ccob-subsystem/tempSphere}               CCOB sphere temperature
-TEMPBRD     Float   ${StatusAggregator.ccob-subsystem/tempBrd}                  CCOB board temperature
+TEMPLED1    Float   ${StatusAggregator.ccob/tempLed1}                 CCOB daughter board temperature, front
+TEMPLED2    Float   ${StatusAggregator.ccob/tempLed2}                 CCOB daughter board temperature, back
+TEMPSPH     Float   ${StatusAggregator.ccob/tempSphere}               CCOB sphere temperature
+TEMPBRD     Float   ${StatusAggregator.ccob/tempBrd}                  CCOB board temperature
 # BOT items
-BOTXCAM     Float ${StatusAggregator.bot-motorplatform/LampStatus/xcam}   
-BOTYCAM     Float ${StatusAggregator.bot-motorplatform/LampStatus/ycam}
-BOTX        Float ${StatusAggregator.bot-motorplatform/LampStatus/xbot}
-BOTY        Float ${StatusAggregator.bot-motorplatform/LampStatus/ybot}
+BOTXCAM     Float ${StatusAggregator.bot-motorplatform/LampStatus/xcam} X position of lamp/source in camera coordinate system     
+BOTYCAM     Float ${StatusAggregator.bot-motorplatform/LampStatus/ycam} Y position of lamp/source in camera coordinate system
+BOTX        Float ${StatusAggregator.bot-motorplatform/LampStatus/xbot} X position of BOT in raw bot coordinates
+BOTY        Float ${StatusAggregator.bot-motorplatform/LampStatus/ybot} Y position of BOT in raw bot coordinates
+# Flat Field projector items
+FILTER      String ${StatusAggregator.bot-bench/ColorFWheel/filterName}   Color filter name from Flat Field Projector
+FILTER2     String ${StatusAggregator.bot-bench/NeutralFWheel/filterName} Neutral density filter name from Flat Field Projector
+
