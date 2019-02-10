@@ -71,8 +71,7 @@ builder.
                 "DAC" (DacControl) // All REBs, physical values
 
                 fitsService (FitsService, 
-                   headerFilesList:["fp-primary:primary", "extended", "fp-reb_cond", "fp-test_cond"],
-                   replacements:["$reb".toString()+":REB"]
+                   headerFilesList:["fp-primary:primary", "extended", "fp-reb_cond", "fp-test_cond"]
                 )
 
                 for (int j = 0; j < 6; j++) {
