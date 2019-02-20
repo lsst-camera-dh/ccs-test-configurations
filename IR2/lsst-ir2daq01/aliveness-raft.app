@@ -8,4 +8,4 @@ system.property.org.lsst.ccs.subsystem.teststand=ts7-1
 system.property.org.lsst.ccs.subsystem.rebps=aliveness-rebps
 system.property.org.lsst.ccs.subsystem.ts8=aliveness-raft
 system.property.org.lsst.ccs.subsystem.ts8-bench=ts8-bench
-
+org.lsst.ccs.subsystem.agent.property.group=aliveness
