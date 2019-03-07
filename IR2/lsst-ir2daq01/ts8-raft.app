@@ -8,4 +8,5 @@ system.property.org.lsst.ccs.subsystem.teststand=ts7-1
 system.property.org.lsst.ccs.subsystem.rebps=ts7-rebps
 system.property.org.lsst.ccs.subsystem.ts8=ts8-raft
 system.property.org.lsst.ccs.subsystem.ts8-bench=ts8-bench
+org.lsst.ccs.subsystem.agent.property.group=ts8-raft
 system.option.verbose:gc
