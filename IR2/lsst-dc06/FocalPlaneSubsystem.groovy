@@ -19,7 +19,7 @@ CCDType type = new ITLCCDType();
 
 FocalPlane focalPlane = new FocalPlane();
 focalPlane.addChildGeometry( Raft.createRaft(type), 2, 2);
-focalPlane.addChildGeometry( Raft.createRaft(type), 1, 0);
+//focalPlane.addChildGeometry( Raft.createRaft(type), 1, 0);
 
 Properties props = BootstrapResourceUtils.getBootstrapSystemProperties()
 def runMode = props.getProperty("org.lsst.ccs.run.mode","normal");
@@ -27,13 +27,11 @@ System.out.println("Building FocalPlane subsystem in run mode: "+runMode);
 
 taskConfig = ["monitor-update/taskPeriodMillis":1000,"monitor-publish/taskPeriodMillis":10000,
               "agentStatusAggregatorService/patternConfigList":[
-              "[pattern:.*,predicate:[agentName:focal-plane]]",
-              "[pattern:.*,predicate:[agentName:bot-motorplatform]]",
-              "[pattern:.*,predicate:[agentName:ccob-subsystem]]",
+              "[pattern:.*,predicate:[agentName:comcam-fp]]",
               "[pattern:.*,predicate:[agentName:fp-rebps]]"]
              ]
 
-def partition = props.getProperty("org.lsst.ccs.raft.partition","2raft")
+def partition = props.getProperty("org.lsst.ccs.raft.partition","comcam")
 
 builder.
     "main" (FocalPlaneSubsystem, geometry:focalPlane, nodeTags:taskConfig) {
@@ -45,7 +43,7 @@ builder.
 
         imageNameService (ImageNameService, 
             dbURL: props.getProperty("org.lsst.ccs.dbUrl", "jdbc:h2:mem:test;MODE=MYSQL"), 
-            source: "MainCamera",
+            source: "ComCam",
             controller: "CCS", 
             timeZoneId: "America/Los_Angeles",
             offset: java.time.Duration.ZERO
@@ -71,8 +69,9 @@ builder.
                 "DAC" (DacControl) // All REBs, physical values
 
                 fitsService (FitsService, 
-                   headerFilesList:["fp-primary:primary", "extended", "fp-reb_cond", "fp-test_cond"],
-                   replacements:["$reb".toString()+":REB"]
+                   headerFilesList:["fp-primary:primary", "extended", "fp-reb_cond", "fp-test_cond"]
+
+//                   replacements:["$reb".toString()+":REB"]
                 )
 
                 for (int j = 0; j < 6; j++) {
