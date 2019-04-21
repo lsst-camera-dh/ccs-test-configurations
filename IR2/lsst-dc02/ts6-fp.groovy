@@ -88,7 +88,7 @@ builder.
 
                 String title = "${reb} temperatures\\"
                 for (int j = 1; j <= 10; j++) {
-                    // Per Stuart Marshall. for 2 ETU testing will will set limits on Temps 1 and 2
+                    // use Temps 1,2 as they are highest
                     if ( j == 1 || j == 2 ) {                
                         "Temp$j" (Channel, description: "${title}Board temperature $j", units: "\u00b0C",
                                 hwChan: j - 1, type: "TEMP", 
