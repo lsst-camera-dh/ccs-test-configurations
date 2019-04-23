@@ -23,15 +23,16 @@ focalPlane.addChildGeometry( Raft.createRaft(type), 2, 2);
 
 Properties props = BootstrapResourceUtils.getBootstrapSystemProperties()
 def runMode = props.getProperty("org.lsst.ccs.run.mode","normal");
-System.out.println("Building FocalPlane subsystem in run mode: "+runMode);
+def focalPlaneName = props.getProperty("org.lsst.ccs.application.name","focal-plane");
+System.out.println("Building "+focalPlaneName+" subsystem in run mode: "+runMode);
 
 taskConfig = ["monitor-update/taskPeriodMillis":1000,"monitor-publish/taskPeriodMillis":10000,
               "agentStatusAggregatorService/patternConfigList":[
-              "[pattern:.*,predicate:[agentName:comcam-fp]]",
-              "[pattern:.*,predicate:[agentName:fp-rebps]]"]
+              "[pattern:.*,predicate:[agentName:${focalPlaneName}],alias:focal-plane]",
+              "[pattern:.*,predicate:[agentName:comcam-rebps],alias:rebps]"]
              ]
 
-def partition = props.getProperty("org.lsst.ccs.raft.partition","comcam")
+def partition = props.getProperty("org.lsst.ccs.rafts.partition","comcam")
 
 builder.
     "main" (FocalPlaneSubsystem, geometry:focalPlane, nodeTags:taskConfig) {
@@ -54,6 +55,8 @@ builder.
         RebBoardTemperatureLowLimit  (Alarm, description:"Alarm for Reb board low temperature limit", eventParm:RaftAlert.REB_BOARD_TEMPERATURE_TOO_LOW.ordinal())
         RebBoardTemperatureHighLimit  (Alarm, description:"Alarm for Reb board high temperature limit", eventParm:RaftAlert.REB_BOARD_TEMPERATURE_TOO_HIGH.ordinal())
 
+        FocalPlaneAlertHandler (FocalPlaneAlertHandler)
+
     for (Raft raftGeometry : focalPlane.getChildrenList() ) {
         System.out.println("Looping on Raft "+raftGeometry.getName());
             
@@ -69,9 +72,7 @@ builder.
                 "DAC" (DacControl) // All REBs, physical values
 
                 fitsService (FitsService, 
-                   headerFilesList:["fp-primary:primary", "extended", "fp-reb_cond", "fp-test_cond"]
-
-//                   replacements:["$reb".toString()+":REB"]
+                   headerFilesList:["primary","fp-primary:primary", "extended", "fp-reb_cond", "fp-test_cond"]
                 )
 
                 for (int j = 0; j < 6; j++) {
@@ -87,7 +88,8 @@ builder.
 
                 String title = "${reb} temperatures\\"
                 for (int j = 1; j <= 10; j++) {
-                    if ( j == 3 || j == 6 ) {                
+                    // Per Stuart Marshall. for 2 ETU testing will will set limits on Temps 1 and 2
+                    if ( j == 1 || j == 2 ) {                
                         "Temp$j" (Channel, description: "${title}Board temperature $j", units: "\u00b0C",
                                 hwChan: j - 1, type: "TEMP", 
                                 checkLo:"alarm", limitLo:10.0, dbandLo:5.0, alarmLo:"RebBoardTemperatureLowLimit",
