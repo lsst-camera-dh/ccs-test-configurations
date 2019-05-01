@@ -35,7 +35,7 @@ builder.main (RebPower, nodeTags:taskConfig) {
     //             devcName: "MainPS", hwChan: 0, type: "CURRENT", scale: 1000, pageId: 4)
 
     for (int i = 0; i < 2; i++) {
-        def reb = (i == 0) ? "GREB" : "WREB"
+        def reb = (i == 0) ? "WREB" : "GREB"
 
         "Page$i" (Page, id: i, label: reb)
 
