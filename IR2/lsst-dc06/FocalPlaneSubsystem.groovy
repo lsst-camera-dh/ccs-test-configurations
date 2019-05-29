@@ -59,7 +59,17 @@ builder.
 
     for (Raft raftGeometry : focalPlane.getChildrenList() ) {
         System.out.println("Looping on Raft "+raftGeometry.getName());
-            
+
+        def raft = raftGeometry.getName()
+
+
+//	TempCtrl   (TempControl, gain: 0.1, timeConst: 120.0, smoothTime: 20.0,
+//        "$raft" () {
+	TempCtrl   (TempControl, gain: 0.1, timeConst: 120.0, smoothTime: 20.0,
+        	       maxOutput: 5.6, awGain: 4.0, basePower: 0.0, tolerance: 0.05,
+		       updateTime: 30000, rebs: ["${raft}/Reb0", "${raft}/Reb2"], tempChans: ["${raft}/Reb0/S01/Temp", "${raft}/Reb1/S11/Temp"])
+//        }
+
         for (Reb rebGeometry : raftGeometry.getChildrenList() ) {
             def rebCount = ((10*raftGeometry.getParallelPosition())+raftGeometry.getSerialPosition())*4+rebGeometry.getParallelPosition();
             def reb = raftGeometry.getName()+"/"+rebGeometry.getName();
@@ -85,6 +95,8 @@ builder.
                     //"Bias$j" (BiasControl, hwChan: j, raw: true)   // All REBs. raw DAC values
                     "Bias$j" (BiasControl, hwChan: j)   // All REBs, physical values
                 }
+
+
 
                 String title = "${reb} temperatures\\"
                 for (int j = 1; j <= 10; j++) {
