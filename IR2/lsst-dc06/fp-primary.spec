@@ -7,23 +7,25 @@ DATE        Date    ${FileCreationTime}         Creation Date and Time of File
 DATE-OBS    Date    ${ObservationDate}          Date of the observation (image acquisition), UTC
 MJD         MJD     ${FileCreationTime}         Modified Julian Date that the file was written
 MJD-OBS     MJD     ${ObservationDate}          Modified Julian Date of image acquisition
-INSTRUME    String  LSST_CAMERA                 Instrument
+INSTRUME    String  COMCAM                      Instrument
+TSTAND      String  EOCCv0_IR2                  Test Stand
 TELESCOP    String  LSST                        Telescope
 IMAGETAG    String  ${Tag}                      DAQ Image id
 CONTNUM     String  ${CCDControllerSerial}      CCD Controller (REB) Serial Number
-SEQFILE     String  ${SequencerFileName}        Sequencer file name
-SEQCKSUM    String  ${SequencerChecksum}        Checksum of Sequencer
+SEQFILE     String  ${focal-plane/RAFT/REB/sequencerFile}  Sequencer file name
+SEQCKSUM    String  ${focal-plane/RAFT/REB/sequencerChecksum} Checksum of Sequencer
+LSST_NUM    String  ${focal-plane/RAFT/REB/CCD/name} LSST Assigned CCD Number
+REBNAME     String  ${focal-plane/RAFT/REB/name} LSST Assigned Name REB name
+RAFTNAME    String  ${focal-plane/RAFT/name}    LSST Assigned Raft name
 CCD_MANU    String  ${CCDManufacturer}          CCD Manufacturer
 CCD_TYPE    String  ${CCDModel}                 CCD Model Number
-CCD_SERN    String  ${CCDControllerSerial}      Manufacturers' CCD Serial Number
-LSST_NUM    String  ${CCDSerialLSST}            LSST Assigned CCD Number
+#CCD_SERN    String  ${CCDControllerSerial}      Manufacturers CCD Serial Number
 CCDSLOT     String  ${CCDSlot}                  The CCD Slot
-REBNAME     String  ${RebName}                  Name of the REB
 IMGTYPE     String  ${ImageType}                BIAS, DARK, \u2026
 TESTTYPE    String  ${TestType}                 DARK:FLAT:OBS:PPUMP:QE:SFLAT
 DETSIZE     String  ${DETSIZE}                  IRAF detector size 
 TEMP_SET    Float   ${TemperatureSetPoint}      CCD Temperature set point (deg C)
-CCDTEMP     Float   ${MeasuredTemperature}      Measured temperature (deg C)
+CCDTEMP     Float   ${focal-plane/RAFT/REB/CCD/Temp} Measured temperature (deg C)
 EXPTIME     Float   ${ExposureTime}             Exposure Time in Seconds
 DARKTIME    Float   ${DarkTime}                 Dark Time in Seconds (see TSEIA-91)
 FILENAME    String  ${OriginalFileName}         Original name of the file
