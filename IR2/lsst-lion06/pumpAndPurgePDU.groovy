@@ -15,7 +15,7 @@ String type = runMode.equals("simulation") ? "APC7900Sim" : "APC7900"
 
 builder.main (ApcPdu) {
 
-    PDU120 (APC7900Device, type: type, node:"192.168.1.2", outlets:["THERMOCOUPLEDISPLAY","Outlet-2","Outlet-3","lowern2valve","ALWAYSON","Outlet-6","n2heater","nitrogenvalve"]) {
+    PDU120 (APC7900Device, type: type, node:"192.168.1.2", outlets:["THERMOCOUPLEDISPLAY","flatlamp","Outlet-3","lowern2valve","ALWAYSON","Outlet-6","n2heater","nitrogenvalve"]) {
         Power    (Channel, description:"PDU power", units:"Watts",
                        hwChan:APC7900Device.CHAN_POWER, type:"POWER",
                        limitHi:1320.0)
