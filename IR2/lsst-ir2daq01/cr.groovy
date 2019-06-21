@@ -29,7 +29,7 @@ def partition = props.getProperty("org.lsst.ccs.rafts.partition", "cr")
 
 CCSBuilder builder = ["ccs-cr"]
 
-builder.main (RaftsMain, nodeTags:taskConfig) {
+builder.main (RaftsMain, nodeTags:taskConfig ) {
 
     def wreb = "WREB"
     def greb = "GREB"
@@ -39,7 +39,12 @@ builder.main (RaftsMain, nodeTags:taskConfig) {
                 updateTime: 30000, rebs: ["${wreb}"], tempChans: ["${wreb}.RTDtemp"])
 //                updateTime: 30000, rebs: ["${wreb}"], tempChans: ["${wreb}.CCDTemp0","${greb}.CCDTemp0","${greb}.CCDTemp1"])
 
-    "$wreb" (REBDevice, hdwType: "daq2", id: 4 * raftId, ifcName: partition, ccdMask: 1, clientFactory:factory) {
+//    "$wreb" (REBDevice, hdwType: "daq2", id: 4 * raftId, ifcName: partition, ccdMask: 1, clientFactory:factory) {
+
+    "$wreb" (REBDevice, hdwType: "daq2", id: 4 * raftId, ifcName: partition, ccdMask: 1, clientFactory:factory,
+            dataSegmentMap: [8, 9, 10, 11, 12, 13, 14, 15, 7, 6, 5, 4, 3, 2, 1, 0], useScienceCCD: true) {
+//            dataSegmentMap: [8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7], useScienceCCD: true) {
+//            dataSegmentMap: [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0], useScienceCCD: true) {
 
         "${wreb}.DAC"  (DacControl)
 
@@ -56,7 +61,11 @@ builder.main (RaftsMain, nodeTags:taskConfig) {
 
     }
 
-    "$greb" (REBDevice, hdwType: "daq2", id: 4 * raftId + 1, ifcName: partition, ccdMask: 3, clientFactory:factory) {
+// default:     private int[] dataSegmentMap = {15, 14, 13, 12, 11, 10, 9, 8, 0, 1, 2, 3, 4, 5, 6, 7};      [position 71:19] 
+
+    "$greb" (REBDevice, hdwType: "daq2", id: 4 * raftId + 1, ifcName: partition, ccdMask: 3, clientFactory:factory,
+             dataSegmentMap: [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0], useScienceCCD: true) {
+//             dataSegmentMap: [8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7], useScienceCCD: true) {
 
         "${greb}.DAC"  (DacControl)
 
