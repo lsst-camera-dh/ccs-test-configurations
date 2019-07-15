@@ -1,3 +1,2 @@
-org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
-org.lsst.ccs.application.description=Run the Teststand-7 subsystem
-org.lsst.ccs.application.args=--description ts7-2 --configuration ""
+org.lsst.ccs.application.extends=ts7-slac
+org.lsst.ccs.application.args=--description ts7-slac --configuration "" --alias ts7-2
