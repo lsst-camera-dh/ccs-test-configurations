@@ -1,6 +1,7 @@
 org.lsst.ccs.application.description=Control the REB power supply
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description rebps --configuration "" --alias fp-rebps
+org.lsst.ccs.subsystem.agent.property.group=camera
 
 #To use a REB power supply with prototype firmware
 #org.lsst.ccs.ps.version=proto
