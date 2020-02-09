@@ -1,5 +1,5 @@
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
-org.lsst.ccs.application.args=--description FocalPlaneSubsystem --configuration "HardwareId:pl60dp96,Rafts:pl60dp96,Limits:pl60dp96,RaftsLimits:pl60dp96,RaftsPower:pl60dp96"
+org.lsst.ccs.application.args=--description FocalPlaneSubsystem --alias fp-3rebs --configuration "HardwareId:3rebs,Rafts:3rebs,Limits:3rebs,RaftsLimits:3rebs,RaftsPower:3rebs"
 org.lsst.ccs.application.description=Run the FocalPlane Subsystem
 org.lsst.ccs.ld.library.path=Daq4
 org.lsst.ccs.raft.partition=camera
