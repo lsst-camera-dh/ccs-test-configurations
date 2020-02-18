@@ -1,0 +1,4 @@
+onlineClampYminus/sentCurrent = -5000
+onlineClampXminus/sentCurrent = -4992
+autochanger/filterOnTrucksID = 54
+onlineClampXplus/sentCurrent = 4992
