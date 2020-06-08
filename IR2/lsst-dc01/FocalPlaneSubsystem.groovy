@@ -46,7 +46,6 @@ builder.
         }
 
         globalProc (GlobalProc, partition: partition, dfltFolder: "raw")
-        focalPlaneConfig (FocalPlaneConfig)
         sequencerConfig (SequencerConfig)
 
         imageNameService (ImageNameService, 
@@ -384,4 +383,5 @@ builder.
             }
         }             
     }
+    "RebTotalPower" (RebTotalPower, description:"Reb Total Power", units:"Watts")
 }
