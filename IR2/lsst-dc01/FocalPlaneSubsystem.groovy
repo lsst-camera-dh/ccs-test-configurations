@@ -5,26 +5,19 @@ import org.lsst.ccs.utilities.image.*;
 import org.lsst.ccs.bootstrap.BootstrapResourceUtils;
 import org.lsst.ccs.imagenaming.service.ImageNameService
 import org.lsst.ccs.subsystem.rafts.*;
-import org.lsst.ccs.subsystem.ts8.sim.*;
 import org.lsst.ccs.drivers.reb.*;
-import org.lsst.ccs.drivers.reb.sim.*;
 import org.lsst.ccs.monitor.*;
 import org.lsst.ccs.subsystem.focalplane.alerts.FocalPlaneAlertType;
-
+import org.lsst.ccs.subsystem.focalplane.RebTotalPower;
 
 CCSBuilder builder = ["focal-plane"]
-
-CCDType type = new ITLCCDType();
 
 Properties buildProperties = buildProperties();
 
 FocalPlane focalPlane = new FocalPlane(buildProperties.getProperty("org.lsst.ccs.subsystem.focal.plane.rafts","[R10:[ccdType:itl],R22:[ccdType:itl]]"));
 
 Properties props = BootstrapResourceUtils.getBootstrapSystemProperties()
-def runMode = props.getProperty("org.lsst.ccs.run.mode","normal");
 def focalPlaneName = props.getProperty("org.lsst.ccs.application.name","focal-plane");
-System.out.println("Building "+focalPlaneName+" subsystem in run mode: "+runMode);
-
 taskConfig = ["monitor-update/taskPeriodMillis":1000,"monitor-publish/taskPeriodMillis":10000,
               "agentStatusAggregatorService/patternConfigList":[
               "[pattern:.*,predicate:[agentName:${focalPlaneName}],alias:focal-plane]",
@@ -39,15 +32,11 @@ def partition = props.getProperty("org.lsst.ccs.raft.partition","2raft")
 builder.
     "main" (FocalPlaneSubsystem, geometry:focalPlane, nodeTags:taskConfig) {
 
-        if (runMode.equals("simulation")) { 
-            clientFactory (ClientFactorySimulation, supportMultiMains:true)
-        } else { 
-            clientFactory (ClientFactory)
-        }
-
-        globalProc (GlobalProc, partition: partition, dfltFolder: "raw")
         sequencerConfig (SequencerConfig)
-
+        webHooksConfig(WebHooksConfig)
+        instrumentConfig(InstrumentConfig)
+        imageCoordinatorService(ImageCoordinatorService)
+    
         imageNameService (ImageNameService, 
             dbURL: props.getProperty("org.lsst.ccs.dbUrl", "jdbc:h2:mem:test;MODE=MYSQL"), 
             source: "MainCamera",
@@ -78,7 +67,6 @@ builder.
             def boolean isRebW = isCornerRaft ? reb.endsWith("RebW") : false;
 
             System.out.println("Using Reb Id "+rebCount+" "+reb+" "+rebGeometry.getUniqueId() );
-            
             
             "$reb" (REBDevice, id:rebCount, ifcName:partition, processImages: false) {
 
@@ -146,6 +134,7 @@ builder.
                                     checkLo:"flag", limitLo:10.0, dbandLo:5.0/*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
                                     checkHi:"flag", limitHi:45, dbandHi:5.0/*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
                 }
+
 
                 "HVBiasSwitch"  (Channel, description: "HV bias switch", format: ".0f",
                             hwChan: 0, type: "HVSWCH")
@@ -383,5 +372,6 @@ builder.
             }
         }             
     }
+
     "RebTotalPower" (RebTotalPower, description:"Reb Total Power", units:"Watts")
 }
