@@ -1,3 +1,4 @@
+system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/25raft/:../etc/:~/ccs/etc/:/etc/ccs/
 system.pre-execute=daqv4-setup
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description FocalPlaneSubsystem --alias ts8-fp --initialConfiguration "defaultInitial"
