@@ -1,6 +1,6 @@
 system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/25raft/:../etc/:~/ccs/etc/:/etc/ccs/
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
-org.lsst.ccs.application.args=--description FocalPlaneSubsystem --alias focal-plane -fp --initialConfiguration "timers:monTest"
+org.lsst.ccs.application.args=--description FocalPlaneSubsystem --alias focal-plane -fp --initialConfiguration ""
 org.lsst.ccs.application.description=Run the FocalPlane Subsystem
 org.lsst.ccs.ld.library.path=Daq4
 org.lsst.ccs.raft.partition=camera
