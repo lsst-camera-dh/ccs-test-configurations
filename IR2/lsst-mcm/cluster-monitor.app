@@ -1,5 +1,5 @@
-system.property.com.sun.management.jmxremote.port=5555 
+#system.property.com.sun.management.jmxremote.port=5555 
 # This seems to cause problems sometimes, I am not sure why
-system.property.com.sun.management.jmxremote.rmi.port=5555 
+#system.property.com.sun.management.jmxremote.rmi.port=5555 
 org.lsst.ccs.use.influxdb.service=true
-org.lsst.ccs.subsystem.cluster.monitor.level=INFO
+#org.lsst.ccs.subsystem.cluster.monitor.level=INFO
