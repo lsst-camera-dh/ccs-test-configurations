@@ -18,19 +18,11 @@ FocalPlane focalPlane = new FocalPlane(buildProperties.getProperty("org.lsst.ccs
 
 Properties props = BootstrapResourceUtils.getBootstrapSystemProperties()
 def focalPlaneName = props.getProperty("org.lsst.ccs.application.name","focal-plane");
-taskConfig = ["monitor-update/taskPeriodMillis":1000,"monitor-publish/taskPeriodMillis":10000,
-              "agentStatusAggregatorService/patternConfigList":[
-              "[pattern:.*,predicate:[agentName:${focalPlaneName}],alias:focal-plane]",
-              "[pattern:.*,predicate:[agentName:bot-motorplatform]]",
-              "[pattern:.*,predicate:[agentName:ccob]]",
-              "[pattern:.*,predicate:[agentName:bot-bench]]",
-              "[pattern:.*,predicate:[agentName:rebpower]]"]
-             ]
 
 def partition = props.getProperty("org.lsst.ccs.raft.partition","2raft")
 
 builder.
-    "main" (FocalPlaneSubsystem, geometry:focalPlane, nodeTags:taskConfig) {
+    "main" (FocalPlaneSubsystem, geometry:focalPlane) {
 
         sequencerConfig (SequencerConfig)
         webHooksConfig(WebHooksConfig)
