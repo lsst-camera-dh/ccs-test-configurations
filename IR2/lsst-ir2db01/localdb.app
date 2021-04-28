@@ -1,4 +1,7 @@
-system.property.com.sun.management.jmxremote.port=5555
+org.lsst.ccs.application.extends=localdb
+org.lsst.ccs.application.args=--description LocalDatabase --initialConfiguration InfluxDb:<site>
+
+#system.property.com.sun.management.jmxremote.port=5555
 # This seems to cause problems, I am not sure why
 #system.property.com.sun.management.jmxremote.rmi.port=5555
 org.lsst.ccs.use.influxdb.service=true
