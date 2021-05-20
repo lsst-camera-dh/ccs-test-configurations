@@ -1,0 +1,266 @@
+**** Loading the library 
+**** Done Loading the library 
+
+Category : filter
+filterG filterID 3 unitless (final)
+filterG weight 33.0 kilos (final)
+filterI filterID 34 unitless (final)
+filterI weight 28.0 kilos (final)
+filterID_27 filterID 27 unitless (final)
+filterID_27 weight 31.0 kilos (final)
+filterID_30 filterID 30 unitless (final)
+filterID_30 weight 38.0 kilos (final)
+filterID_40 filterID 40 unitless (final)
+filterID_40 weight 38.0 kilos (final)
+filterID_46 filterID 46 unitless (final)
+filterID_46 weight 44.5 kilos (final)
+filterID_5 filterID 5 unitless (final)
+filterID_5 weight 26.0 kilos (final)
+filterID_54 filterID 54 unitless (final)
+filterID_54 weight 26.0 kilos (final)
+filterR filterID 60 unitless (final)
+filterR weight 30.0 kilos (final)
+filterU filterID 29 unitless (final)
+filterU weight 38.0 kilos (final)
+filterY filterID 15 unitless (final)
+filterY weight 22.5 kilos (final)
+filterZ filterID 17 unitless (final)
+filterZ weight 28.0 kilos (final)
+
+Category : Services
+agentStatusAggregatorService patternConfigList []  (final)
+persistencyService persistencyDir   (final)
+schedulers/default nTasks 4  (read-only)
+schedulers/default nThreads 8  (final)
+
+Category : serialNB
+ai814 serialNB c7ca0645 unitless
+carouselController serialNB 80003117 unitless
+clampXminusController serialNB 79003900 unitless
+clampXplusController serialNB 79020968 unitless
+hyttc580 serialNB 25008180 unitless
+pt100 serialNB c7c50149 unitless
+
+Category : controller
+carouselController paramsForCurrent [ContinuousCurrentLimit:10000,MaxSpeedInCurrentMode:2237,MotorType:11,OutputCurrentLimit:20000,PolePairNumber:11,PositionSensorType:8] 
+carouselController paramsForHoming [HomeOffset:0] 
+carouselController paramsForProfilePosition [MaxFollowingError:200000,MaxPositionLimit:2147483647,MaxProfileVelocity:2166,MinPositionLimit:-2147483648,MotionProfileType:1,ProfileAcceleration:2000,ProfileDeceleration:2000,ProfileVelocity:1000,QuickStopDeceleration:10000] 
+clampXminusController paramsForCurrent [ContinuousCurrentLimit:2330,MaxSpeedInCurrentMode:500,MotorType:11,OutputCurrentLimit:4660,PolePairNumber:8,PositionSensorType:3,ThermalTimeConstantWinding:170] 
+clampXminusController paramsForHoming [HomeOffset:0] 
+clampXminusController paramsForProfilePosition [MotionProfileType:0] 
+clampXplusController paramsForCurrent [ContinuousCurrentLimit:2330,MaxSpeedInCurrentMode:500,MotorType:11,OutputCurrentLimit:4660,PolePairNumber:8,PositionSensorType:3,ThermalTimeConstantWinding:170] 
+clampXplusController paramsForHoming [HomeOffset:0] 
+clampXplusController paramsForProfilePosition [MotionProfileType:0] 
+
+Category : timers
+agentMonitorService taskPeriodMillis 60000 
+heartbeat taskPeriodMillis 1000 
+main-updateGui taskPeriodMillis 1000 
+runtimeInfo taskPeriodMillis 60000 
+
+Category : canbus
+tcpProxy baud 1m unitless
+tcpProxy busName 0 unitless
+tcpProxy hardwareBootTimeout 5000 milliseconds
+tcpProxy masterNodeID 8 unitless
+
+Category : sensor
+acAF3b byteNumero 11 unitless
+acAF3b dioName fakePlutoGateway unitless (final)
+acAF3b inputNumero 7 unitless
+acAF3s byteNumero 11 unitless
+acAF3s dioName fakePlutoGateway unitless (final)
+acAF3s inputNumero 6 unitless
+ai814 transmissionType 1 unitless
+filterPresenceXminus1 deviceName hyttc580 unitless
+filterPresenceXminus2 deviceName hyttc580 unitless
+filterPresenceXminus3 deviceName hyttc580 unitless
+filterPresenceXminus4 deviceName hyttc580 unitless
+filterPresenceXminus5 deviceName hyttc580 unitless
+filterPresenceXplus1 deviceName hyttc580 unitless
+filterPresenceXplus2 deviceName hyttc580 unitless
+filterPresenceXplus3 deviceName hyttc580 unitless
+filterPresenceXplus4 deviceName hyttc580 unitless
+filterPresenceXplus5 deviceName hyttc580 unitless
+lockSensorXminus1 deviceName hyttc580 unitless
+lockSensorXminus2 deviceName hyttc580 unitless
+lockSensorXminus3 deviceName hyttc580 unitless
+lockSensorXminus4 deviceName hyttc580 unitless
+lockSensorXminus5 deviceName hyttc580 unitless
+lockSensorXplus1 deviceName hyttc580 unitless
+lockSensorXplus2 deviceName hyttc580 unitless
+lockSensorXplus3 deviceName hyttc580 unitless
+lockSensorXplus4 deviceName hyttc580 unitless
+lockSensorXplus5 deviceName hyttc580 unitless
+slaveModuleSensor1 deviceName hyttc580 unitless
+slaveModuleSensor2 deviceName hyttc580 unitless
+slaveModuleSensor3 deviceName hyttc580 unitless
+slaveModuleSensor4 deviceName hyttc580 unitless
+slaveModuleSensor5 deviceName hyttc580 unitless
+
+Category : carousel
+carousel deltaPosition 1000 Carousel encoder steps
+carousel fastAcceleration 2000 Carousel acceleration unit
+carousel fastDeceleration 1000 Carousel acceleration unit
+carousel fastRotationTimeout 20000 milliseconds
+carousel fastVelocity 2000 Carousel velocity unit
+carousel maxStandbyDeltaPosition 200 Carousel encoder steps
+carousel minStandbyDeltaPosition 100 Carousel encoder steps
+carousel slowAcceleration 200 Carousel acceleration unit
+carousel slowDeceleration 200 Carousel acceleration unit
+carousel slowRotationTimeout 100000 milliseconds
+carousel slowVelocity 500 Carousel velocity unit
+carousel timeToUpdateProtectionSystem 2000 milliseconds
+clampXminus1 currentToMaintainUnlocked 200 mA
+clampXminus1 currentToUnlock -4660 mA
+clampXminus1 filterPresenceMaxValue 12000 mV
+clampXminus1 filterPresenceOffset3 0 mV
+clampXminus1 filterPresenceValueB 9000 mV
+clampXminus1 lockSensorMaxValue 11000 mV
+clampXminus1 lockSensorMinValue 200 mV
+clampXminus1 lockSensorValueA 5000 mV
+clampXminus1 lockSensorValueB 9000 mV
+clampXminus1 timeToPrepareUnlock 200 milliseconds
+clampXminus1 timeoutForReleasing 1500 milliseconds
+clampXminus1 timeoutForUnlocking 1500 milliseconds
+clampXminus2 currentToMaintainUnlocked 200 mA
+clampXminus2 currentToUnlock -4660 mA
+clampXminus2 filterPresenceMaxValue 12000 mV
+clampXminus2 filterPresenceOffset3 0 mV
+clampXminus2 filterPresenceValueB 9000 mV
+clampXminus2 lockSensorMaxValue 11000 mV
+clampXminus2 lockSensorMinValue 200 mV
+clampXminus2 lockSensorValueA 5000 mV
+clampXminus2 lockSensorValueB 9000 mV
+clampXminus2 timeToPrepareUnlock 200 milliseconds
+clampXminus2 timeoutForReleasing 1500 milliseconds
+clampXminus2 timeoutForUnlocking 1500 milliseconds
+clampXminus3 currentToMaintainUnlocked 200 mA
+clampXminus3 currentToUnlock -4660 mA
+clampXminus3 filterPresenceMaxValue 12000 mV
+clampXminus3 filterPresenceOffset3 0 mV
+clampXminus3 filterPresenceValueB 9000 mV
+clampXminus3 lockSensorMaxValue 11000 mV
+clampXminus3 lockSensorMinValue 200 mV
+clampXminus3 lockSensorValueA 5000 mV
+clampXminus3 lockSensorValueB 9000 mV
+clampXminus3 timeToPrepareUnlock 200 milliseconds
+clampXminus3 timeoutForReleasing 1500 milliseconds
+clampXminus3 timeoutForUnlocking 1500 milliseconds
+clampXminus4 currentToMaintainUnlocked 200 mA
+clampXminus4 currentToUnlock -4660 mA
+clampXminus4 filterPresenceMaxValue 12000 mV
+clampXminus4 filterPresenceOffset3 0 mV
+clampXminus4 filterPresenceValueB 9000 mV
+clampXminus4 lockSensorMaxValue 11000 mV
+clampXminus4 lockSensorMinValue 200 mV
+clampXminus4 lockSensorValueA 5000 mV
+clampXminus4 lockSensorValueB 9000 mV
+clampXminus4 timeToPrepareUnlock 200 milliseconds
+clampXminus4 timeoutForReleasing 1500 milliseconds
+clampXminus4 timeoutForUnlocking 1500 milliseconds
+clampXminus5 currentToMaintainUnlocked -200 mA
+clampXminus5 currentToUnlock -3000 mA
+clampXminus5 filterPresenceMaxValue 12000 mV
+clampXminus5 filterPresenceOffset3 0 mV
+clampXminus5 filterPresenceValueB 9000 mV
+clampXminus5 lockSensorMaxValue 11000 mV
+clampXminus5 lockSensorMinValue 200 mV
+clampXminus5 lockSensorValueA 5000 mV
+clampXminus5 lockSensorValueB 9000 mV
+clampXminus5 timeToPrepareUnlock 200 milliseconds
+clampXminus5 timeoutForReleasing 1500 milliseconds
+clampXminus5 timeoutForUnlocking 1500 milliseconds
+clampXplus1 currentToMaintainUnlocked 200 mA
+clampXplus1 currentToUnlock -4660 mA
+clampXplus1 filterPresenceMaxValue 12000 mV
+clampXplus1 filterPresenceOffset3 0 mV
+clampXplus1 filterPresenceValueB 9000 mV
+clampXplus1 lockSensorMaxValue 11000 mV
+clampXplus1 lockSensorMinValue 200 mV
+clampXplus1 lockSensorValueA 5000 mV
+clampXplus1 lockSensorValueB 9000 mV
+clampXplus1 timeToPrepareUnlock 200 milliseconds
+clampXplus1 timeoutForReleasing 1500 milliseconds
+clampXplus1 timeoutForUnlocking 1500 milliseconds
+clampXplus2 currentToMaintainUnlocked 200 mA
+clampXplus2 currentToUnlock -4660 mA
+clampXplus2 filterPresenceMaxValue 12000 mV
+clampXplus2 filterPresenceOffset3 0 mV
+clampXplus2 filterPresenceValueB 9000 mV
+clampXplus2 lockSensorMaxValue 11000 mV
+clampXplus2 lockSensorMinValue 200 mV
+clampXplus2 lockSensorValueA 5000 mV
+clampXplus2 lockSensorValueB 9000 mV
+clampXplus2 timeToPrepareUnlock 200 milliseconds
+clampXplus2 timeoutForReleasing 1500 milliseconds
+clampXplus2 timeoutForUnlocking 1500 milliseconds
+clampXplus3 currentToMaintainUnlocked 200 mA
+clampXplus3 currentToUnlock -4660 mA
+clampXplus3 filterPresenceMaxValue 12000 mV
+clampXplus3 filterPresenceOffset3 0 mV
+clampXplus3 filterPresenceValueB 9000 mV
+clampXplus3 lockSensorMaxValue 11000 mV
+clampXplus3 lockSensorMinValue 200 mV
+clampXplus3 lockSensorValueA 5000 mV
+clampXplus3 lockSensorValueB 9000 mV
+clampXplus3 timeToPrepareUnlock 200 milliseconds
+clampXplus3 timeoutForReleasing 1500 milliseconds
+clampXplus3 timeoutForUnlocking 1500 milliseconds
+clampXplus4 currentToMaintainUnlocked 200 mA
+clampXplus4 currentToUnlock -4660 mA
+clampXplus4 filterPresenceMaxValue 12000 mV
+clampXplus4 filterPresenceOffset3 0 mV
+clampXplus4 filterPresenceValueB 9000 mV
+clampXplus4 lockSensorMaxValue 11000 mV
+clampXplus4 lockSensorMinValue 200 mV
+clampXplus4 lockSensorValueA 5000 mV
+clampXplus4 lockSensorValueB 9000 mV
+clampXplus4 timeToPrepareUnlock 200 milliseconds
+clampXplus4 timeoutForReleasing 1500 milliseconds
+clampXplus4 timeoutForUnlocking 1500 milliseconds
+clampXplus5 currentToMaintainUnlocked -200 mA
+clampXplus5 currentToUnlock -3000 mA
+clampXplus5 filterPresenceMaxValue 12000 mV
+clampXplus5 filterPresenceOffset3 0 mV
+clampXplus5 filterPresenceValueB 9000 mV
+clampXplus5 lockSensorMaxValue 11000 mV
+clampXplus5 lockSensorMinValue 200 mV
+clampXplus5 lockSensorValueA 5000 mV
+clampXplus5 lockSensorValueB 9000 mV
+clampXplus5 timeToPrepareUnlock 200 milliseconds
+clampXplus5 timeoutForReleasing 1500 milliseconds
+clampXplus5 timeoutForUnlocking 1500 milliseconds
+socket1 standbyPosition -204220 Carousel encoder steps
+socket2 standbyPosition -1076700 Carousel encoder steps
+socket3 standbyPosition -1949180 Carousel encoder steps
+socket4 standbyPosition -2821500 Carousel encoder steps
+socket5 standbyPosition -3694040 Carousel encoder steps
+
+Category : nodeID
+ai814 nodeID 30 index (final)
+carouselController nodeID 12 index (final)
+clampXminusController nodeID 26 index (final)
+clampXplusController nodeID 27 index (final)
+hyttc580 nodeID 3 index (final)
+pt100 nodeID 31 index (final)
+
+Category : readRate
+carousel readSensorsRate 250 
+clampXminus1 readSensorsRate 250 
+clampXminus2 readSensorsRate 250 
+clampXminus3 readSensorsRate 250 
+clampXminus4 readSensorsRate 250 
+clampXminus5 readSensorsRate 250 
+clampXplus1 readSensorsRate 250 
+clampXplus2 readSensorsRate 250 
+clampXplus3 readSensorsRate 250 
+clampXplus4 readSensorsRate 250 
+clampXplus5 readSensorsRate 250 
+socket1 readSensorsRate 250 
+socket2 readSensorsRate 250 
+socket3 readSensorsRate 250 
+socket4 readSensorsRate 250 
+socket5 readSensorsRate 250 
+
+

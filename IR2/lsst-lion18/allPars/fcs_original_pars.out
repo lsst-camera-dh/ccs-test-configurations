@@ -1,0 +1,846 @@
+**** Loading the library 
+**** Done Loading the library 
+
+Category : controller
+carouselController paramsForCurrent [ContinuousCurrentLimit:10000,MaxSpeedInCurrentMode:5000,MotorType:11,OutputCurrentLimit:20000,PolePairNumber:12,PositionSensorType:8] 
+carouselController paramsForHoming [HomeOffset:0] 
+carouselController paramsForProfilePosition [MaxPositionLimit:2147483647,MaxProfileVelocity:5164,MinPositionLimit:-2147483648,MotionProfileType:1,ProfileAcceleration:3000,ProfileDeceleration:3000,QuickStopDeceleration:10000] 
+carrierController paramsForCurrent [ContinuousCurrentLimit:7290,MaxSpeedInCurrentMode:9840,MotorType:10,OutputCurrentLimit:14580,PolePairNumber:1,PositionSensorType:4,ThermalTimeConstantWinding:187] 
+carrierController paramsForHoming [CurrentThresholdHomingMode:500,HomeOffset:500,HomingAcceleration:200] 
+carrierController paramsForProfilePosition [MaxFollowingError:2000,MaxPositionLimit:1037800,MaxProfileVelocity:228,MinPositionLimit:-2147483648,MotionProfileType:1,ProfileAcceleration:30,ProfileDeceleration:8,ProfileVelocity:200,QuickStopDeceleration:1000] 
+clampXminusController paramsForCurrent [ContinuousCurrentLimit:2330,MaxSpeedInCurrentMode:500,MotorType:11,OutputCurrentLimit:4660,PolePairNumber:8,PositionSensorType:3,ThermalTimeConstantWinding:170] 
+clampXminusController paramsForHoming [HomeOffset:0] 
+clampXminusController paramsForProfilePosition [MotionProfileType:0] 
+clampXplusController paramsForCurrent [ContinuousCurrentLimit:2330,MaxSpeedInCurrentMode:500,MotorType:11,OutputCurrentLimit:4660,PolePairNumber:8,PositionSensorType:3,ThermalTimeConstantWinding:170] 
+clampXplusController paramsForHoming [HomeOffset:0] 
+clampXplusController paramsForProfilePosition [MotionProfileType:0] 
+hooksController paramsForCurrent [ContinuousCurrentLimit:500,MaxSpeedInCurrentMode:750,MotorType:10,OutputCurrentLimit:6880,PolePairNumber:1,PositionSensorType:1] 
+hooksController paramsForHoming [HomeOffset:0] 
+hooksController paramsForProfilePosition [MaxPositionLimit:415000,MinPositionLimit:-2147483648,MotionProfileType:0] 
+latchXminusController paramsForCurrent [ContinuousCurrentLimit:400,MaxSpeedInCurrentMode:3000,MotorType:1,OutputCurrentLimit:400,PolePairNumber:2,PositionSensorType:0,ThermalTimeConstantWinding:40] 
+latchXminusController paramsForHoming [HomeOffset:0] 
+latchXminusController paramsForProfilePosition [MotionProfileType:0] 
+latchXplusController paramsForCurrent [ContinuousCurrentLimit:400,MaxSpeedInCurrentMode:100,MotorType:1,OutputCurrentLimit:400,PolePairNumber:2,PositionSensorType:0,ThermalTimeConstantWinding:40] 
+latchXplusController paramsForHoming [HomeOffset:0] 
+latchXplusController paramsForProfilePosition [MotionProfileType:0] 
+linearRailMasterController encoderRibbonMinValue 107280 
+linearRailMasterController paramsForCurrent [ContinuousCurrentLimit:7000,MaxSpeedInCurrentMode:9140,MotorType:10,OutputCurrentLimit:7000,PolePairNumber:1,PositionSensorType:260,ThermalTimeConstantWinding:187] 
+linearRailMasterController paramsForHoming [HomeOffset:0] 
+linearRailMasterController paramsForProfilePosition [MaxFollowingError:7000,MaxProfileVelocity:281,MotionProfileType:0,ProfileAcceleration:50,ProfileDeceleration:50,ProfileVelocity:260,QuickStopDeceleration:310] 
+linearRailSlaveController encoderRibbonMinValue 3556549 
+linearRailSlaveController paramsForCurrent [ContinuousCurrentLimit:7000,MaxSpeedInCurrentMode:9140,MotorType:10,OutputCurrentLimit:7000,PolePairNumber:1,PositionSensorType:260,ThermalTimeConstantWinding:187] 
+linearRailSlaveController paramsForHoming [HomeOffset:0] 
+linearRailSlaveController paramsForProfilePosition [MaxFollowingError:5000,MaxProfileVelocity:281,MotionProfileType:0,ProfileAcceleration:50,ProfileDeceleration:50,ProfileVelocity:260,QuickStopDeceleration:10000] 
+onlineClampXminusController paramsForCurrent [ContinuousCurrentLimit:3200,MaxSpeedInCurrentMode:25000,MotorType:1,OutputCurrentLimit:6400,PolePairNumber:1,PositionSensorType:0,ThermalTimeConstantWinding:40] 
+onlineClampXminusController paramsForHoming [HomeOffset:0] 
+onlineClampXminusController paramsForProfilePosition [MaxFollowingError:10000,MotionProfileType:0,ProfileVelocity:1000] 
+onlineClampXplusController paramsForCurrent [ContinuousCurrentLimit:3200,MaxSpeedInCurrentMode:6930,MotorType:1,OutputCurrentLimit:6400,PolePairNumber:1,PositionSensorType:0,ThermalTimeConstantWinding:419] 
+onlineClampXplusController paramsForHoming [HomeOffset:0] 
+onlineClampXplusController paramsForProfilePosition [MaxFollowingError:10000,MotionProfileType:0,ProfileVelocity:1000] 
+onlineClampYminusController paramsForCurrent [ContinuousCurrentLimit:5000,MaxSpeedInCurrentMode:25000,MotorType:1,OutputCurrentLimit:5000,PolePairNumber:1,PositionSensorType:0,ThermalTimeConstantWinding:40] 
+onlineClampYminusController paramsForHoming [HomeOffset:0] 
+onlineClampYminusController paramsForProfilePosition [MaxFollowingError:10000,MotionProfileType:0,ProfileVelocity:1000] 
+
+Category : timers
+agentMonitorService taskPeriodMillis 60000 
+heartbeat taskPeriodMillis 1000 
+main-updateGui taskPeriodMillis 1000 
+monitor-check taskPeriodMillis 10000 
+monitor-publish taskPeriodMillis 10000 
+monitor-update taskPeriodMillis -1 
+runtimeInfo taskPeriodMillis 60000 
+
+Category : loader
+carrier deltaPosition 50 microns
+carrier engagedPosition 987500 microns
+carrier handoffPosition 1037500 microns
+carrier highAcceleration 100 
+carrier highDeceleration 50 
+carrier highSpeed 187 rpm/minute
+carrier lowAcceleration 30 
+carrier lowDeceleration 30 
+carrier lowSpeed 50 rpm/minute
+carrier maxCurrent 1000 mA
+carrier maxSpeed 227 rpm/minute
+carrier storagePosition 0 microns
+carrier timeoutForGoingToEngaged 120000 milliseconds
+carrier timeoutForGoingToHandOff 120000 milliseconds
+carrier timeoutForGoingToStorage 120000 milliseconds
+clamp absolutePositionToClose 325000 
+clamp currentToClamp 445 mA
+clamp currentToOpen -200 mA
+clamp minClampedVoltage 25 0.1 Volt
+clamp relativePositionToUnclamp -25000 
+clamp targetPositionToOpen 0 
+clamp timeoutForClampingHooks 60000 milliseconds
+clamp timeoutForClosingHooks 60000 milliseconds
+clamp timeoutForOpeningHooks 60000 milliseconds
+
+Category : canbus
+loaderTcpProxy baud 125k unitless
+loaderTcpProxy busName 1 unitless
+loaderTcpProxy hardwareBootTimeout 3000 milliseconds
+loaderTcpProxy masterNodeID 9 unitless
+tcpProxy baud 1m unitless
+tcpProxy busName 0 unitless
+tcpProxy hardwareBootTimeout 5000 milliseconds
+tcpProxy masterNodeID 8 unitless
+
+Category : carousel
+carousel deltaPosition 1000 Carousel encoder steps
+carousel fastAcceleration 2000 Carousel acceleration unit
+carousel fastDeceleration 1000 Carousel acceleration unit
+carousel fastRotationTimeout 30000 milliseconds
+carousel fastVelocity 3400 Carousel velocity unit
+carousel maxStandbyDeltaPosition 130 Carousel encoder steps
+carousel minStandbyDeltaPosition 100 Carousel encoder steps
+carousel slowAcceleration 200 Carousel acceleration unit
+carousel slowDeceleration 200 Carousel acceleration unit
+carousel slowRotationTimeout 100000 milliseconds
+carousel slowVelocity 500 Carousel velocity unit
+carousel timeToUpdateProtectionSystem 2000 milliseconds
+clampXminus1 currentToMaintainUnlocked 200 mA
+clampXminus1 currentToUnlock -3500 mA
+clampXminus1 filterPresenceMaxValue 12000 mV
+clampXminus1 filterPresenceOffset3 0 mV
+clampXminus1 filterPresenceValueB 9100 mV
+clampXminus1 lockSensorMaxValue 11000 mV
+clampXminus1 lockSensorMinValue 200 mV
+clampXminus1 lockSensorValueA 1000 mV
+clampXminus1 lockSensorValueB 9200 mV
+clampXminus1 timeToPrepareUnlock 200 milliseconds
+clampXminus1 timeoutForReleasing 1500 milliseconds
+clampXminus1 timeoutForUnlocking 2000 milliseconds
+clampXminus2 currentToMaintainUnlocked 200 mA
+clampXminus2 currentToUnlock -3200 mA
+clampXminus2 filterPresenceMaxValue 12000 mV
+clampXminus2 filterPresenceOffset3 0 mV
+clampXminus2 filterPresenceValueB 9100 mV
+clampXminus2 lockSensorMaxValue 11000 mV
+clampXminus2 lockSensorMinValue 200 mV
+clampXminus2 lockSensorValueA 1550 mV
+clampXminus2 lockSensorValueB 9200 mV
+clampXminus2 timeToPrepareUnlock 200 milliseconds
+clampXminus2 timeoutForReleasing 1500 milliseconds
+clampXminus2 timeoutForUnlocking 2000 milliseconds
+clampXminus3 currentToMaintainUnlocked 200 mA
+clampXminus3 currentToUnlock -3200 mA
+clampXminus3 filterPresenceMaxValue 12000 mV
+clampXminus3 filterPresenceOffset3 250 mV
+clampXminus3 filterPresenceValueB 9100 mV
+clampXminus3 lockSensorMaxValue 11000 mV
+clampXminus3 lockSensorMinValue 200 mV
+clampXminus3 lockSensorValueA 1000 mV
+clampXminus3 lockSensorValueB 9500 mV
+clampXminus3 timeToPrepareUnlock 200 milliseconds
+clampXminus3 timeoutForReleasing 1500 milliseconds
+clampXminus3 timeoutForUnlocking 2000 milliseconds
+clampXminus4 currentToMaintainUnlocked 200 mA
+clampXminus4 currentToUnlock -3500 mA
+clampXminus4 filterPresenceMaxValue 12000 mV
+clampXminus4 filterPresenceOffset3 0 mV
+clampXminus4 filterPresenceValueB 9100 mV
+clampXminus4 lockSensorMaxValue 11000 mV
+clampXminus4 lockSensorMinValue 200 mV
+clampXminus4 lockSensorValueA 1000 mV
+clampXminus4 lockSensorValueB 9100 mV
+clampXminus4 timeToPrepareUnlock 200 milliseconds
+clampXminus4 timeoutForReleasing 3000 milliseconds
+clampXminus4 timeoutForUnlocking 2000 milliseconds
+clampXminus5 currentToMaintainUnlocked 200 mA
+clampXminus5 currentToUnlock -3200 mA
+clampXminus5 filterPresenceMaxValue 12000 mV
+clampXminus5 filterPresenceOffset3 0 mV
+clampXminus5 filterPresenceValueB 9100 mV
+clampXminus5 lockSensorMaxValue 11000 mV
+clampXminus5 lockSensorMinValue 200 mV
+clampXminus5 lockSensorValueA 1300 mV
+clampXminus5 lockSensorValueB 9500 mV
+clampXminus5 timeToPrepareUnlock 200 milliseconds
+clampXminus5 timeoutForReleasing 1500 milliseconds
+clampXminus5 timeoutForUnlocking 2000 milliseconds
+clampXplus1 currentToMaintainUnlocked 200 mA
+clampXplus1 currentToUnlock -2800 mA
+clampXplus1 filterPresenceMaxValue 12000 mV
+clampXplus1 filterPresenceOffset3 250 mV
+clampXplus1 filterPresenceValueB 7700 mV
+clampXplus1 lockSensorMaxValue 11000 mV
+clampXplus1 lockSensorMinValue 200 mV
+clampXplus1 lockSensorValueA 2300 mV
+clampXplus1 lockSensorValueB 9500 mV
+clampXplus1 timeToPrepareUnlock 200 milliseconds
+clampXplus1 timeoutForReleasing 1500 milliseconds
+clampXplus1 timeoutForUnlocking 2000 milliseconds
+clampXplus2 currentToMaintainUnlocked 200 mA
+clampXplus2 currentToUnlock -2800 mA
+clampXplus2 filterPresenceMaxValue 12000 mV
+clampXplus2 filterPresenceOffset3 0 mV
+clampXplus2 filterPresenceValueB 9100 mV
+clampXplus2 lockSensorMaxValue 11000 mV
+clampXplus2 lockSensorMinValue 200 mV
+clampXplus2 lockSensorValueA 2400 mV
+clampXplus2 lockSensorValueB 9000 mV
+clampXplus2 timeToPrepareUnlock 200 milliseconds
+clampXplus2 timeoutForReleasing 1500 milliseconds
+clampXplus2 timeoutForUnlocking 2000 milliseconds
+clampXplus3 currentToMaintainUnlocked 200 mA
+clampXplus3 currentToUnlock -2800 mA
+clampXplus3 filterPresenceMaxValue 12000 mV
+clampXplus3 filterPresenceOffset3 0 mV
+clampXplus3 filterPresenceValueB 9100 mV
+clampXplus3 lockSensorMaxValue 11000 mV
+clampXplus3 lockSensorMinValue 200 mV
+clampXplus3 lockSensorValueA 2250 mV
+clampXplus3 lockSensorValueB 9500 mV
+clampXplus3 timeToPrepareUnlock 200 milliseconds
+clampXplus3 timeoutForReleasing 1500 milliseconds
+clampXplus3 timeoutForUnlocking 2000 milliseconds
+clampXplus4 currentToMaintainUnlocked 200 mA
+clampXplus4 currentToUnlock -2800 mA
+clampXplus4 filterPresenceMaxValue 12000 mV
+clampXplus4 filterPresenceOffset3 150 mV
+clampXplus4 filterPresenceValueB 9100 mV
+clampXplus4 lockSensorMaxValue 11000 mV
+clampXplus4 lockSensorMinValue 200 mV
+clampXplus4 lockSensorValueA 2600 mV
+clampXplus4 lockSensorValueB 9500 mV
+clampXplus4 timeToPrepareUnlock 200 milliseconds
+clampXplus4 timeoutForReleasing 3000 milliseconds
+clampXplus4 timeoutForUnlocking 2000 milliseconds
+clampXplus5 currentToMaintainUnlocked 200 mA
+clampXplus5 currentToUnlock -2800 mA
+clampXplus5 filterPresenceMaxValue 12000 mV
+clampXplus5 filterPresenceOffset3 0 mV
+clampXplus5 filterPresenceValueB 9100 mV
+clampXplus5 lockSensorMaxValue 11000 mV
+clampXplus5 lockSensorMinValue 200 mV
+clampXplus5 lockSensorValueA 2000 mV
+clampXplus5 lockSensorValueB 9500 mV
+clampXplus5 timeToPrepareUnlock 200 milliseconds
+clampXplus5 timeoutForReleasing 1500 milliseconds
+clampXplus5 timeoutForUnlocking 2000 milliseconds
+socket1 standbyPosition 4197000 Carousel encoder steps
+socket2 standbyPosition 3324500 Carousel encoder steps
+socket3 standbyPosition 2451800 Carousel encoder steps
+socket4 standbyPosition 1579700 Carousel encoder steps
+socket5 standbyPosition 707070 Carousel encoder steps
+
+Category : Devices
+seneca1 disabled false 
+seneca2 disabled false 
+
+Category : filter
+filterG filterID 3 unitless (final)
+filterG weight 33.0 kilos (final)
+filterI filterID 34 unitless (final)
+filterI weight 28.0 kilos (final)
+filterID_27 filterID 27 unitless (final)
+filterID_27 weight 31.0 kilos (final)
+filterID_30 filterID 30 unitless (final)
+filterID_30 weight 38.0 kilos (final)
+filterID_40 filterID 40 unitless (final)
+filterID_40 weight 38.0 kilos (final)
+filterID_46 filterID 46 unitless (final)
+filterID_46 weight 44.5 kilos (final)
+filterID_5 filterID 5 unitless (final)
+filterID_5 weight 26.0 kilos (final)
+filterID_54 filterID 54 unitless (final)
+filterID_54 weight 26.0 kilos (final)
+filterR filterID 60 unitless (final)
+filterR weight 30.0 kilos (final)
+filterU filterID 29 unitless (final)
+filterU weight 38.0 kilos (final)
+filterY filterID 15 unitless (final)
+filterY weight 22.5 kilos (final)
+filterZ filterID 17 unitless (final)
+filterZ weight 28.0 kilos (final)
+
+Category : Services
+agentStatusAggregatorService patternConfigList []  (final)
+persistencyService persistencyDir   (final)
+schedulers/default nTasks 5  (read-only)
+schedulers/default nThreads 8  (final)
+schedulers/monitor-update-publish-scheduler nTasks 2  (read-only)
+schedulers/monitor-update-publish-scheduler nThreads 2  (final)
+
+Category : serialNB
+acSensorsGateway serialNB 446b unitless
+ai814 serialNB c7c80479 unitless
+brakeSystemGateway serialNB 4472 unitless
+carouselController serialNB 80012116 unitless
+carrierController serialNB 80006442 unitless
+clampXminusController serialNB 79029102 unitless
+clampXplusController serialNB 79028932 unitless
+hooksController serialNB 79018738 unitless
+hyttc580 serialNB 25008180 unitless
+latchXminusController serialNB 84010184 unitless
+latchXplusController serialNB 84010169 unitless
+linearRailMasterController serialNB 80011240 unitless
+linearRailSlaveController serialNB 80011011 unitless
+loaderPlutoGateway serialNB 310f unitless
+onlineClampXminusController serialNB 79022208 unitless
+onlineClampXplusController serialNB 79029101 unitless
+onlineClampYminusController serialNB 79026482 unitless
+onlineStrainGauge serialNB 0 unitless
+proximitySensorsDevice serialNB c7c60364 unitless
+pt100 serialNB c7c60186 unitless
+tempSensorsDevice1 serialNB 19VE0077 unitless
+tempSensorsDevice2 serialNB 19VE0076 unitless
+
+Category : Limits
+tempCellXminus dbandHi 0.0 
+tempCellXminus dbandLo 0.0 
+tempCellXminus limitHi 100.0 
+tempCellXminus limitLo -20.0 
+tempClampMotorXminus dbandHi 0.0 
+tempClampMotorXminus dbandLo 0.0 
+tempClampMotorXminus limitHi 100.0 
+tempClampMotorXminus limitLo -20.0 
+tempClampMotorXplus dbandHi 0.0 
+tempClampMotorXplus dbandLo 0.0 
+tempClampMotorXplus limitHi 100.0 
+tempClampMotorXplus limitLo -20.0 
+tempClampMotorYminus dbandHi 0.0 
+tempClampMotorYminus dbandLo 0.0 
+tempClampMotorYminus limitHi 100.0 
+tempClampMotorYminus limitLo -20.0 
+tempFrontBox dbandHi 0.0 
+tempFrontBox dbandLo 0.0 
+tempFrontBox limitHi 100.0 
+tempFrontBox limitLo -20.0 
+tempLinearRailMotorXminus dbandHi 0.0 
+tempLinearRailMotorXminus dbandLo 0.0 
+tempLinearRailMotorXminus limitHi 100.0 
+tempLinearRailMotorXminus limitLo -20.0 
+tempLinearRailMotorXplus dbandHi 0.0 
+tempLinearRailMotorXplus dbandLo 0.0 
+tempLinearRailMotorXplus limitHi 100.0 
+tempLinearRailMotorXplus limitLo -20.0 
+tempRearBox dbandHi 0.0 
+tempRearBox dbandLo 0.0 
+tempRearBox limitHi 100.0 
+tempRearBox limitLo -20.0 
+
+Category : sensor
+LPS_0 byteNumero 10 unitless
+LPS_0 dioName loaderPlutoGateway unitless (final)
+LPS_0 inputNumero 6 unitless
+LPS_1 byteNumero 10 unitless
+LPS_1 dioName loaderPlutoGateway unitless (final)
+LPS_1 inputNumero 7 unitless
+LRH_0 byteNumero 10 unitless
+LRH_0 dioName loaderPlutoGateway unitless (final)
+LRH_0 inputNumero 4 unitless
+LRH_1 byteNumero 10 unitless
+LRH_1 dioName loaderPlutoGateway unitless (final)
+LRH_1 inputNumero 5 unitless
+OUT_AF0 byteNumero 10 unitless
+OUT_AF0 dioName acSensorsGateway unitless (final)
+OUT_AF0 inputNumero 4 unitless
+OUT_AF0_C byteNumero 10 unitless
+OUT_AF0_C dioName acSensorsGateway unitless (final)
+OUT_AF0_C inputNumero 5 unitless
+OUT_AF1 byteNumero 10 unitless
+OUT_AF1 dioName acSensorsGateway unitless (final)
+OUT_AF1 inputNumero 6 unitless
+OUT_AF1_C byteNumero 10 unitless
+OUT_AF1_C dioName acSensorsGateway unitless (final)
+OUT_AF1_C inputNumero 7 unitless
+OUT_AF3 byteNumero 11 unitless
+OUT_AF3 dioName acSensorsGateway unitless (final)
+OUT_AF3 inputNumero 0 unitless
+OUT_AF3_C byteNumero 11 unitless
+OUT_AF3_C dioName acSensorsGateway unitless (final)
+OUT_AF3_C inputNumero 1 unitless
+OUT_AP1 byteNumero 11 unitless
+OUT_AP1 dioName acSensorsGateway unitless (final)
+OUT_AP1 inputNumero 6 unitless
+OUT_AP1_C byteNumero 11 unitless
+OUT_AP1_C dioName acSensorsGateway unitless (final)
+OUT_AP1_C inputNumero 7 unitless
+OUT_AP2 byteNumero 11 unitless
+OUT_AP2 dioName acSensorsGateway unitless (final)
+OUT_AP2 inputNumero 2 unitless
+OUT_AP2_C byteNumero 11 unitless
+OUT_AP2_C dioName acSensorsGateway unitless (final)
+OUT_AP2_C inputNumero 3 unitless
+OUT_AP3 byteNumero 11 unitless
+OUT_AP3 dioName acSensorsGateway unitless (final)
+OUT_AP3 inputNumero 4 unitless
+OUT_AP3_C byteNumero 11 unitless
+OUT_AP3_C dioName acSensorsGateway unitless (final)
+OUT_AP3_C inputNumero 5 unitless
+acAF0b byteNumero 11 unitless
+acAF0b dioName loaderPlutoGateway unitless (final)
+acAF0b inputNumero 3 unitless
+acAF0s byteNumero 11 unitless
+acAF0s dioName loaderPlutoGateway unitless (final)
+acAF0s inputNumero 2 unitless
+acAF1b byteNumero 11 unitless
+acAF1b dioName loaderPlutoGateway unitless (final)
+acAF1b inputNumero 5 unitless
+acAF1s byteNumero 11 unitless
+acAF1s dioName loaderPlutoGateway unitless (final)
+acAF1s inputNumero 4 unitless
+acAF3b byteNumero 11 unitless
+acAF3b dioName loaderPlutoGateway unitless (final)
+acAF3b inputNumero 7 unitless
+acAF3s byteNumero 11 unitless
+acAF3s dioName loaderPlutoGateway unitless (final)
+acAF3s inputNumero 6 unitless
+acAP2b byteNumero 11 unitless
+acAP2b dioName loaderPlutoGateway unitless (final)
+acAP2b inputNumero 1 unitless
+acAP2s byteNumero 11 unitless
+acAP2s dioName loaderPlutoGateway unitless (final)
+acAP2s inputNumero 0 unitless
+ai814 transmissionType 1 unitless
+carouselHoldingFilterSensor0 byteNumero 3 unitless
+carouselHoldingFilterSensor0 dioName acSensorsGateway unitless (final)
+carouselHoldingFilterSensor0 inputNumero 6 unitless
+carouselHoldingFilterSensor1 byteNumero 3 unitless
+carouselHoldingFilterSensor1 dioName acSensorsGateway unitless (final)
+carouselHoldingFilterSensor1 inputNumero 7 unitless
+carouselStoppedAtStandby byteNumero 3 unitless
+carouselStoppedAtStandby dioName acSensorsGateway unitless (final)
+carouselStoppedAtStandby inputNumero 0 unitless
+carouselStoppedAtStandbyC byteNumero 3 unitless
+carouselStoppedAtStandbyC dioName acSensorsGateway unitless (final)
+carouselStoppedAtStandbyC inputNumero 1 unitless
+carousel_CF0 byteNumero 3 unitless
+carousel_CF0 dioName acSensorsGateway unitless (final)
+carousel_CF0 inputNumero 2 unitless
+carousel_CF0_C byteNumero 3 unitless
+carousel_CF0_C dioName acSensorsGateway unitless (final)
+carousel_CF0_C inputNumero 3 unitless
+carousel_CF1 byteNumero 3 unitless
+carousel_CF1 dioName acSensorsGateway unitless (final)
+carousel_CF1 inputNumero 4 unitless
+carousel_CF1_C byteNumero 3 unitless
+carousel_CF1_C dioName acSensorsGateway unitless (final)
+carousel_CF1_C inputNumero 5 unitless
+clampedStatusSensor byteNumero 6 unitless
+clampedStatusSensor dioName loaderPlutoGateway unitless (final)
+clampedStatusSensor inputNumero 4 unitless
+closeSensorBLatchXminus byteNumero 0 unitless
+closeSensorBLatchXminus dioName acSensorsGateway unitless (final)
+closeSensorBLatchXminus inputNumero 1 unitless
+closeSensorBLatchXplus byteNumero 8 unitless
+closeSensorBLatchXplus dioName acSensorsGateway unitless (final)
+closeSensorBLatchXplus inputNumero 1 unitless
+closeSensorLatchXminus byteNumero 0 unitless
+closeSensorLatchXminus dioName acSensorsGateway unitless (final)
+closeSensorLatchXminus inputNumero 0 unitless
+closeSensorLatchXplus byteNumero 8 unitless
+closeSensorLatchXplus dioName acSensorsGateway unitless (final)
+closeSensorLatchXplus inputNumero 0 unitless
+filterEngagedSensorBLatchXminus byteNumero 0 unitless
+filterEngagedSensorBLatchXminus dioName acSensorsGateway unitless (final)
+filterEngagedSensorBLatchXminus inputNumero 5 unitless
+filterEngagedSensorBLatchXplus byteNumero 8 unitless
+filterEngagedSensorBLatchXplus dioName acSensorsGateway unitless (final)
+filterEngagedSensorBLatchXplus inputNumero 5 unitless
+filterEngagedSensorLatchXminus byteNumero 0 unitless
+filterEngagedSensorLatchXminus dioName acSensorsGateway unitless (final)
+filterEngagedSensorLatchXminus inputNumero 4 unitless
+filterEngagedSensorLatchXplus byteNumero 8 unitless
+filterEngagedSensorLatchXplus dioName acSensorsGateway unitless (final)
+filterEngagedSensorLatchXplus inputNumero 4 unitless
+filterIDSensor0 byteNumero 4 unitless
+filterIDSensor0 dioName acSensorsGateway unitless (final)
+filterIDSensor0 inputNumero 0 unitless
+filterIDSensor1 byteNumero 4 unitless
+filterIDSensor1 dioName acSensorsGateway unitless (final)
+filterIDSensor1 inputNumero 1 unitless
+filterIDSensor2 byteNumero 4 unitless
+filterIDSensor2 dioName acSensorsGateway unitless (final)
+filterIDSensor2 inputNumero 2 unitless
+filterIDSensor3 byteNumero 4 unitless
+filterIDSensor3 dioName acSensorsGateway unitless (final)
+filterIDSensor3 inputNumero 3 unitless
+filterIDSensor4 byteNumero 4 unitless
+filterIDSensor4 dioName acSensorsGateway unitless (final)
+filterIDSensor4 inputNumero 4 unitless
+filterIDSensor5 byteNumero 4 unitless
+filterIDSensor5 dioName acSensorsGateway unitless (final)
+filterIDSensor5 inputNumero 5 unitless
+filterPresenceXminus1 deviceName hyttc580 unitless
+filterPresenceXminus2 deviceName hyttc580 unitless
+filterPresenceXminus3 deviceName hyttc580 unitless
+filterPresenceXminus4 deviceName hyttc580 unitless
+filterPresenceXminus5 deviceName hyttc580 unitless
+filterPresenceXplus1 deviceName hyttc580 unitless
+filterPresenceXplus2 deviceName hyttc580 unitless
+filterPresenceXplus3 deviceName hyttc580 unitless
+filterPresenceXplus4 deviceName hyttc580 unitless
+filterPresenceXplus5 deviceName hyttc580 unitless
+forceSensor0 byteNumero 4 unitless
+forceSensor0 deviceName loaderPlutoGateway unitless
+forceSensor1 byteNumero 8 unitless
+forceSensor1 deviceName loaderPlutoGateway unitless
+handoffPositionSensorBXminus byteNumero 1 unitless
+handoffPositionSensorBXminus dioName acSensorsGateway unitless (final)
+handoffPositionSensorBXminus inputNumero 1 unitless
+handoffPositionSensorBXplus byteNumero 9 unitless
+handoffPositionSensorBXplus dioName acSensorsGateway unitless (final)
+handoffPositionSensorBXplus inputNumero 1 unitless
+handoffPositionSensorXminus byteNumero 1 unitless
+handoffPositionSensorXminus dioName acSensorsGateway unitless (final)
+handoffPositionSensorXminus inputNumero 0 unitless
+handoffPositionSensorXplus byteNumero 9 unitless
+handoffPositionSensorXplus dioName acSensorsGateway unitless (final)
+handoffPositionSensorXplus inputNumero 0 unitless
+inclinometerXminus byteNumero 6 unitless
+inclinometerXminus deviceName acSensorsGateway unitless
+inclinometerXplus byteNumero 12 unitless
+inclinometerXplus deviceName acSensorsGateway unitless
+keyEng byteNumero 10 unitless
+keyEng dioName loaderPlutoGateway unitless (final)
+keyEng inputNumero 2 unitless
+keyEngb byteNumero 10 unitless
+keyEngb dioName loaderPlutoGateway unitless (final)
+keyEngb inputNumero 3 unitless
+keyLock byteNumero 10 unitless
+keyLock dioName loaderPlutoGateway unitless (final)
+keyLock inputNumero 0 unitless
+keyLockb byteNumero 10 unitless
+keyLockb dioName loaderPlutoGateway unitless (final)
+keyLockb inputNumero 1 unitless
+loaderCarrierRelayStatus byteNumero 6 unitless
+loaderCarrierRelayStatus dioName loaderPlutoGateway unitless (final)
+loaderCarrierRelayStatus inputNumero 6 unitless
+loaderChainPresenceSensor byteNumero 7 unitless
+loaderChainPresenceSensor dioName loaderPlutoGateway unitless (final)
+loaderChainPresenceSensor inputNumero 5 unitless
+loaderCloseSensor1 byteNumero 2 unitless
+loaderCloseSensor1 dioName loaderPlutoGateway unitless (final)
+loaderCloseSensor1 inputNumero 4 unitless
+loaderCloseSensor2 byteNumero 2 unitless
+loaderCloseSensor2 dioName loaderPlutoGateway unitless (final)
+loaderCloseSensor2 inputNumero 5 unitless
+loaderCloseSensor3 byteNumero 2 unitless
+loaderCloseSensor3 dioName loaderPlutoGateway unitless (final)
+loaderCloseSensor3 inputNumero 6 unitless
+loaderCloseSensor4 byteNumero 2 unitless
+loaderCloseSensor4 dioName loaderPlutoGateway unitless (final)
+loaderCloseSensor4 inputNumero 7 unitless
+loaderConnectedSensor byteNumero 2 unitless
+loaderConnectedSensor dioName acSensorsGateway unitless (final)
+loaderConnectedSensor inputNumero 4 unitless
+loaderConnectedSensorC byteNumero 2 unitless
+loaderConnectedSensorC dioName acSensorsGateway unitless (final)
+loaderConnectedSensorC inputNumero 5 unitless
+loaderDefaultStatus byteNumero 7 unitless
+loaderDefaultStatus dioName loaderPlutoGateway unitless (final)
+loaderDefaultStatus inputNumero 6 unitless
+loaderEngagedPositionSensor0 byteNumero 3 unitless
+loaderEngagedPositionSensor0 dioName loaderPlutoGateway unitless (final)
+loaderEngagedPositionSensor0 inputNumero 6 unitless
+loaderEngagedPositionSensor1 byteNumero 3 unitless
+loaderEngagedPositionSensor1 dioName loaderPlutoGateway unitless (final)
+loaderEngagedPositionSensor1 inputNumero 7 unitless
+loaderFilterGoodPositionStatus byteNumero 7 unitless
+loaderFilterGoodPositionStatus dioName loaderPlutoGateway unitless (final)
+loaderFilterGoodPositionStatus inputNumero 7 unitless
+loaderFilterPresenceSensor0 byteNumero 3 unitless
+loaderFilterPresenceSensor0 dioName loaderPlutoGateway unitless (final)
+loaderFilterPresenceSensor0 inputNumero 0 unitless
+loaderFilterPresenceSensor1 byteNumero 3 unitless
+loaderFilterPresenceSensor1 dioName loaderPlutoGateway unitless (final)
+loaderFilterPresenceSensor1 inputNumero 1 unitless
+loaderHandoffPositionSensor0 byteNumero 6 unitless
+loaderHandoffPositionSensor0 dioName loaderPlutoGateway unitless (final)
+loaderHandoffPositionSensor0 inputNumero 0 unitless
+loaderHandoffPositionSensor1 byteNumero 6 unitless
+loaderHandoffPositionSensor1 dioName loaderPlutoGateway unitless (final)
+loaderHandoffPositionSensor1 inputNumero 1 unitless
+loaderHoldingFilterSensor0 byteNumero 2 unitless
+loaderHoldingFilterSensor0 dioName acSensorsGateway unitless (final)
+loaderHoldingFilterSensor0 inputNumero 6 unitless
+loaderHoldingFilterSensor1 byteNumero 2 unitless
+loaderHoldingFilterSensor1 dioName acSensorsGateway unitless (final)
+loaderHoldingFilterSensor1 inputNumero 7 unitless
+loaderHooksRelayStatus byteNumero 6 unitless
+loaderHooksRelayStatus dioName loaderPlutoGateway unitless (final)
+loaderHooksRelayStatus inputNumero 7 unitless
+loaderOnCameraSensor0 byteNumero 3 unitless
+loaderOnCameraSensor0 dioName loaderPlutoGateway unitless (final)
+loaderOnCameraSensor0 inputNumero 2 unitless
+loaderOnCameraSensor1 byteNumero 3 unitless
+loaderOnCameraSensor1 dioName loaderPlutoGateway unitless (final)
+loaderOnCameraSensor1 inputNumero 3 unitless
+loaderOpenSensor1 byteNumero 2 unitless
+loaderOpenSensor1 dioName loaderPlutoGateway unitless (final)
+loaderOpenSensor1 inputNumero 0 unitless
+loaderOpenSensor2 byteNumero 2 unitless
+loaderOpenSensor2 dioName loaderPlutoGateway unitless (final)
+loaderOpenSensor2 inputNumero 1 unitless
+loaderOpenSensor3 byteNumero 2 unitless
+loaderOpenSensor3 dioName loaderPlutoGateway unitless (final)
+loaderOpenSensor3 inputNumero 2 unitless
+loaderOpenSensor4 byteNumero 2 unitless
+loaderOpenSensor4 dioName loaderPlutoGateway unitless (final)
+loaderOpenSensor4 inputNumero 3 unitless
+loaderStoragePositionSensor0 byteNumero 3 unitless
+loaderStoragePositionSensor0 dioName loaderPlutoGateway unitless (final)
+loaderStoragePositionSensor0 inputNumero 4 unitless
+loaderStoragePositionSensor1 byteNumero 3 unitless
+loaderStoragePositionSensor1 dioName loaderPlutoGateway unitless (final)
+loaderStoragePositionSensor1 inputNumero 5 unitless
+lockOut byteNumero 14 unitless
+lockOut dioName acSensorsGateway unitless (final)
+lockOut inputNumero 2 unitless
+lockOut_C byteNumero 14 unitless
+lockOut_C dioName acSensorsGateway unitless (final)
+lockOut_C inputNumero 3 unitless
+lockSensorXminus1 deviceName hyttc580 unitless
+lockSensorXminus2 deviceName hyttc580 unitless
+lockSensorXminus3 deviceName hyttc580 unitless
+lockSensorXminus4 deviceName hyttc580 unitless
+lockSensorXminus5 deviceName hyttc580 unitless
+lockSensorXplus1 deviceName hyttc580 unitless
+lockSensorXplus2 deviceName hyttc580 unitless
+lockSensorXplus3 deviceName hyttc580 unitless
+lockSensorXplus4 deviceName hyttc580 unitless
+lockSensorXplus5 deviceName hyttc580 unitless
+lpmLatchesStatus byteNumero 5 unitless
+lpmLatchesStatus dioName acSensorsGateway unitless (final)
+lpmLatchesStatus inputNumero 1 unitless
+lpmLinearRail1Status byteNumero 4 unitless
+lpmLinearRail1Status dioName acSensorsGateway unitless (final)
+lpmLinearRail1Status inputNumero 6 unitless
+lpmLinearRail2Status byteNumero 4 unitless
+lpmLinearRail2Status dioName acSensorsGateway unitless (final)
+lpmLinearRail2Status inputNumero 7 unitless
+lpmOnlineClampsStatus byteNumero 5 unitless
+lpmOnlineClampsStatus dioName acSensorsGateway unitless (final)
+lpmOnlineClampsStatus inputNumero 0 unitless
+onlineClampXminusCloseSensor byteNumero 1 unitless
+onlineClampXminusCloseSensor dioName acSensorsGateway unitless (final)
+onlineClampXminusCloseSensor inputNumero 6 unitless
+onlineClampXminusCloseSensorC byteNumero 1 unitless
+onlineClampXminusCloseSensorC dioName acSensorsGateway unitless (final)
+onlineClampXminusCloseSensorC inputNumero 7 unitless
+onlineClampXminusOpenSensor byteNumero 1 unitless
+onlineClampXminusOpenSensor dioName acSensorsGateway unitless (final)
+onlineClampXminusOpenSensor inputNumero 4 unitless
+onlineClampXminusOpenSensorC byteNumero 1 unitless
+onlineClampXminusOpenSensorC dioName acSensorsGateway unitless (final)
+onlineClampXminusOpenSensorC inputNumero 5 unitless
+onlineClampXplusCloseSensor byteNumero 9 unitless
+onlineClampXplusCloseSensor dioName acSensorsGateway unitless (final)
+onlineClampXplusCloseSensor inputNumero 6 unitless
+onlineClampXplusCloseSensorC byteNumero 9 unitless
+onlineClampXplusCloseSensorC dioName acSensorsGateway unitless (final)
+onlineClampXplusCloseSensorC inputNumero 7 unitless
+onlineClampXplusOpenSensor byteNumero 9 unitless
+onlineClampXplusOpenSensor dioName acSensorsGateway unitless (final)
+onlineClampXplusOpenSensor inputNumero 4 unitless
+onlineClampXplusOpenSensorC byteNumero 9 unitless
+onlineClampXplusOpenSensorC dioName acSensorsGateway unitless (final)
+onlineClampXplusOpenSensorC inputNumero 5 unitless
+onlineClampYminusCloseSensor byteNumero 2 unitless
+onlineClampYminusCloseSensor dioName acSensorsGateway unitless (final)
+onlineClampYminusCloseSensor inputNumero 2 unitless
+onlineClampYminusCloseSensorC byteNumero 2 unitless
+onlineClampYminusCloseSensorC dioName acSensorsGateway unitless (final)
+onlineClampYminusCloseSensorC inputNumero 3 unitless
+onlineClampYminusOpenSensor byteNumero 2 unitless
+onlineClampYminusOpenSensor dioName acSensorsGateway unitless (final)
+onlineClampYminusOpenSensor inputNumero 0 unitless
+onlineClampYminusOpenSensorC byteNumero 2 unitless
+onlineClampYminusOpenSensorC dioName acSensorsGateway unitless (final)
+onlineClampYminusOpenSensorC inputNumero 1 unitless
+onlinePositionSensorBXminus byteNumero 1 unitless
+onlinePositionSensorBXminus dioName acSensorsGateway unitless (final)
+onlinePositionSensorBXminus inputNumero 3 unitless
+onlinePositionSensorBXplus byteNumero 9 unitless
+onlinePositionSensorBXplus dioName acSensorsGateway unitless (final)
+onlinePositionSensorBXplus inputNumero 3 unitless
+onlinePositionSensorXminus byteNumero 1 unitless
+onlinePositionSensorXminus dioName acSensorsGateway unitless (final)
+onlinePositionSensorXminus inputNumero 2 unitless
+onlinePositionSensorXplus byteNumero 9 unitless
+onlinePositionSensorXplus dioName acSensorsGateway unitless (final)
+onlinePositionSensorXplus inputNumero 2 unitless
+openSensorBLatchXminus byteNumero 0 unitless
+openSensorBLatchXminus dioName acSensorsGateway unitless (final)
+openSensorBLatchXminus inputNumero 3 unitless
+openSensorBLatchXplus byteNumero 8 unitless
+openSensorBLatchXplus dioName acSensorsGateway unitless (final)
+openSensorBLatchXplus inputNumero 3 unitless
+openSensorLatchXminus byteNumero 0 unitless
+openSensorLatchXminus dioName acSensorsGateway unitless (final)
+openSensorLatchXminus inputNumero 2 unitless
+openSensorLatchXplus byteNumero 8 unitless
+openSensorLatchXplus dioName acSensorsGateway unitless (final)
+openSensorLatchXplus inputNumero 2 unitless
+overClampedStatusSensor byteNumero 6 unitless
+overClampedStatusSensor dioName loaderPlutoGateway unitless (final)
+overClampedStatusSensor inputNumero 5 unitless
+presenceLoader byteNumero 14 unitless
+presenceLoader dioName acSensorsGateway unitless (final)
+presenceLoader inputNumero 0 unitless
+presenceLoader_C byteNumero 14 unitless
+presenceLoader_C dioName acSensorsGateway unitless (final)
+presenceLoader_C inputNumero 1 unitless
+slaveModuleSensor1 deviceName hyttc580 unitless
+slaveModuleSensor2 deviceName hyttc580 unitless
+slaveModuleSensor3 deviceName hyttc580 unitless
+slaveModuleSensor4 deviceName hyttc580 unitless
+slaveModuleSensor5 deviceName hyttc580 unitless
+standbyPositionSensorBXminus byteNumero 0 unitless
+standbyPositionSensorBXminus dioName acSensorsGateway unitless (final)
+standbyPositionSensorBXminus inputNumero 7 unitless
+standbyPositionSensorBXplus byteNumero 8 unitless
+standbyPositionSensorBXplus dioName acSensorsGateway unitless (final)
+standbyPositionSensorBXplus inputNumero 7 unitless
+standbyPositionSensorXminus byteNumero 0 unitless
+standbyPositionSensorXminus dioName acSensorsGateway unitless (final)
+standbyPositionSensorXminus inputNumero 6 unitless
+standbyPositionSensorXplus byteNumero 8 unitless
+standbyPositionSensorXplus dioName acSensorsGateway unitless (final)
+standbyPositionSensorXplus inputNumero 6 unitless
+unclampedStatusSensor byteNumero 6 unitless
+unclampedStatusSensor dioName loaderPlutoGateway unitless (final)
+unclampedStatusSensor inputNumero 2 unitless
+underClampedStatusSensor byteNumero 6 unitless
+underClampedStatusSensor dioName loaderPlutoGateway unitless (final)
+underClampedStatusSensor inputNumero 3 unitless
+
+Category : autochanger
+autochanger timeToUpdateProtectionSystem 2000 milliseconds
+autochanger waitTimeForBrakeLR 20 milliseconds
+autochanger waitTimeForBrakeOC 20 milliseconds
+autochangerTrucks adjustmentFactor 1200.0 microns/V
+autochangerTrucks approachOnlinePosition 9000 microns
+autochangerTrucks approachStandbyPosition 984000 microns
+autochangerTrucks deltaPositionMax 25 microns
+autochangerTrucks handoffPosition 77000 microns
+autochangerTrucks highAcceleration 50 
+autochangerTrucks highDeceleration 50 
+autochangerTrucks highSpeed 260 
+autochangerTrucks lowAcceleration 50 
+autochangerTrucks lowDeceleration 50 
+autochangerTrucks lowSpeed 50 
+autochangerTrucks maxActualPositionValue 1005000 microns
+autochangerTrucks minActualPositionValue 0 microns
+autochangerTrucks minTargetPosition 2500 microns
+autochangerTrucks naturalPosition 3215 microns
+autochangerTrucks onlinePosition 3600 microns
+autochangerTrucks positionRangeAtHandoff 100 microns
+autochangerTrucks positionRangeAtOnline 50 microns
+autochangerTrucks positionRangeAtStandby 100 microns
+autochangerTrucks positionRangeInTravel 150 microns
+autochangerTrucks prelimaryTargetPosition 3367 microns
+autochangerTrucks proximitySensorInput 1 unitless
+autochangerTrucks standbyPosition 1005500 microns
+autochangerTrucks standbyPositionEmpty 1005500 microns
+autochangerTrucks timeoutForAlignSlave 5000 milliseconds
+autochangerTrucks timeoutForTrucksMotion 50000 milliseconds
+autochangerTrucks umax 4.6 V
+autochangerTrucks umin 2.0 V
+autochangerTrucks utarget 2.5 V
+latchXminus currentToClose -300 mA
+latchXminus currentToOpen 300 mA
+latchXminus timeoutForClosing 3000 milliseconds
+latchXminus timeoutForOpening 3000 milliseconds
+latchXplus currentToClose -300 mA
+latchXplus currentToOpen 300 mA
+latchXplus timeoutForClosing 3000 milliseconds
+latchXplus timeoutForOpening 3000 milliseconds
+onlineClampXminus currentToClamp 0 mA
+onlineClampXminus currentToOpen 0 mA
+onlineClampXminus deltaCurrent 50 mA
+onlineClampXminus finalCurrentToClose 0 mA
+onlineClampXminus incrementCurrentToClamp 250 mA
+onlineClampXminus incrementCurrentToClose 250 mA
+onlineClampXminus incrementCurrentToOpen 250 mA
+onlineClampXminus initialCurrentToClose 0 mA
+onlineClampXminus targetPositionToClose -98000 
+onlineClampXminus targetPositionToOpen -10000 
+onlineClampXplus currentToClamp 0 mA
+onlineClampXplus currentToOpen 0 mA
+onlineClampXplus deltaCurrent 50 mA
+onlineClampXplus finalCurrentToClose 0 mA
+onlineClampXplus incrementCurrentToClamp 250 mA
+onlineClampXplus incrementCurrentToClose 250 mA
+onlineClampXplus incrementCurrentToOpen 250 mA
+onlineClampXplus initialCurrentToClose 0 mA
+onlineClampXplus targetPositionToClose 98000 
+onlineClampXplus targetPositionToOpen 10000 
+onlineClampYminus currentToClamp 0 mA
+onlineClampYminus currentToOpen 0 mA
+onlineClampYminus deltaCurrent 50 mA
+onlineClampYminus finalCurrentToClose 0 mA
+onlineClampYminus incrementCurrentToClamp 250 mA
+onlineClampYminus incrementCurrentToClose 250 mA
+onlineClampYminus incrementCurrentToOpen 250 mA
+onlineClampYminus initialCurrentToClose 0 mA
+onlineClampYminus targetPositionToClose -47500 
+onlineClampYminus targetPositionToOpen -3000 
+onlineClamps maxClosedStrain 1572 
+onlineClamps maxLockedStrain 1484 
+onlineClamps maxTimeToCloseClampsX 2000 milliseconds
+onlineClamps maxTimeToLockAllClamps 3000 milliseconds
+onlineClamps maxTimeToOpenClampsX 2000 milliseconds
+onlineClamps maxTimeToUnlockAllClamps 3000 milliseconds
+onlineClamps minLockedStrain 500 
+onlineClamps minPeriod 200 milliseconds
+onlineClamps strainGain 2.978 
+onlineClamps timeoutForLockingClamps 15000 milliseconds
+onlineClamps timeoutForUnlockingClamps 15000 milliseconds
+
+Category : nodeID
+acSensorsGateway nodeID 58 index (final)
+ai814 nodeID 30 index (final)
+brakeSystemGateway nodeID 43 index (final)
+carouselController nodeID 12 index (final)
+carrierController nodeID 90 index (final)
+clampXminusController nodeID 26 index (final)
+clampXplusController nodeID 27 index (final)
+hooksController nodeID 91 index (final)
+hyttc580 nodeID 3 index (final)
+latchXminusController nodeID 15 index (final)
+latchXplusController nodeID 14 index (final)
+linearRailMasterController nodeID 42 index (final)
+linearRailSlaveController nodeID 44 index (final)
+loaderPlutoGateway nodeID 5 index (final)
+onlineClampXminusController nodeID 49 index (final)
+onlineClampXplusController nodeID 48 index (final)
+onlineClampYminusController nodeID 50 index (final)
+onlineStrainGauge nodeID 33 index (final)
+proximitySensorsDevice nodeID 34 index (final)
+pt100 nodeID 31 index (final)
+tempSensorsDevice1 nodeID 74 index (final)
+tempSensorsDevice2 nodeID 75 index (final)
+
+Category : readRate
+autochangerTrucks readSensorsRate 250 
+carousel readSensorsRate 250 
+carrier readSensorsRate 250 
+clamp readSensorsRate 250 
+clampXminus1 readSensorsRate 250 
+clampXminus2 readSensorsRate 250 
+clampXminus3 readSensorsRate 250 
+clampXminus4 readSensorsRate 250 
+clampXminus5 readSensorsRate 250 
+clampXplus1 readSensorsRate 250 
+clampXplus2 readSensorsRate 250 
+clampXplus3 readSensorsRate 250 
+clampXplus4 readSensorsRate 250 
+clampXplus5 readSensorsRate 250 
+latchXminus readSensorsRate 250 
+latchXplus readSensorsRate 250 
+latches readSensorsRate 250 
+onlineClampXminus readSensorsRate 250 
+onlineClampXplus readSensorsRate 250 
+onlineClampYminus readSensorsRate 250 
+onlineClamps readSensorsRate 250 
+socket1 readSensorsRate 250 
+socket2 readSensorsRate 250 
+socket3 readSensorsRate 250 
+socket4 readSensorsRate 250 
+socket5 readSensorsRate 250 
+
+
