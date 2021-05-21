@@ -1,0 +1,205 @@
+Configuring groovy for Loader standalone
+Building Main class: class org.lsst.ccs.subsystems.fcs.LoaderMain
+
+Category : Services
+agentStatusAggregatorService patternConfigList []  (final)
+persistencyService persistencyDir   (final)
+schedulers/default nTasks 4  (read-only)
+schedulers/default nThreads 8  (final)
+
+Category : serialNB
+carrierController serialNB 80006442 unitless
+hooksController serialNB 79018738 unitless
+loaderPlutoGateway serialNB 310f unitless
+
+Category : controller
+carrierController paramsForCurrent [ContinuousCurrentLimit:7290,MaxSpeedInCurrentMode:9840,MotorType:10,OutputCurrentLimit:14580,PolePairNumber:1,PositionSensorType:4,ThermalTimeConstantWinding:187] 
+carrierController paramsForHoming [CurrentThresholdHomingMode:500,HomeOffset:600,HomePosition:0,HomingAcceleration:200,SpeedForSwitchSearch:10,SpeedForZeroSearch:10] 
+carrierController paramsForProfilePosition [MaxFollowingError:100,MaxPositionLimit:1038300,MaxProfileVelocity:228,MinPositionLimit:-2147483648,MotionProfileType:1,ProfileAcceleration:30,ProfileDeceleration:30,ProfileVelocity:200,QuickStopDeceleration:1000] 
+hooksController paramsForCurrent [ContinuousCurrentLimit:500,MaxSpeedInCurrentMode:500,MotorType:10,OutputCurrentLimit:6880,PolePairNumber:1,PositionSensorType:1] 
+hooksController paramsForHoming [HomeOffset:1000] 
+hooksController paramsForProfilePosition [MaxFollowingError:100,MaxPositionLimit:415000,MinPositionLimit:-2147483648,MotionProfileType:0,ProfileDeceleration:50] 
+
+Category : timers
+agentMonitorService taskPeriodMillis 60000 
+heartbeat taskPeriodMillis 1000 
+main-updateGui taskPeriodMillis 1000 
+runtimeInfo taskPeriodMillis 60000 
+
+Category : loader
+carrier deltaPosition 50 microns
+carrier engagedPosition 987500 microns
+carrier handoffPosition 1037500 microns
+carrier highAcceleration 100 
+carrier highDeceleration 50 
+carrier highSpeed 187 rpm/minute
+carrier lowAcceleration 30 
+carrier lowDeceleration 30 
+carrier lowSpeed 50 rpm/minute
+carrier maxCurrent 1000 mA
+carrier maxSpeed 227 rpm/minute
+carrier storagePosition 0 microns
+carrier timeoutForGoingToEngaged 120000 milliseconds
+carrier timeoutForGoingToHandOff 120000 milliseconds
+carrier timeoutForGoingToStorage 120000 milliseconds
+clamp absolutePositionToClose 325000 
+clamp currentToClamp 445 mA
+clamp currentToOpen -200 mA
+clamp minClampedVoltage 32 0.1 Volt
+clamp relativePositionToUnclamp -25000 
+clamp targetPositionToOpen 0 
+clamp timeoutForClampingHooks 30000 milliseconds
+clamp timeoutForClosingHooks 60000 milliseconds
+clamp timeoutForOpeningHooks 120000 milliseconds
+
+Category : canbus
+loaderTcpProxy baud 125k unitless
+loaderTcpProxy busName 1 unitless
+loaderTcpProxy hardwareBootTimeout 3000 milliseconds
+loaderTcpProxy masterNodeID 8 unitless
+
+Category : sensor
+LPS_0 byteNumero 10 unitless
+LPS_0 dioName loaderPlutoGateway unitless (final)
+LPS_0 inputNumero 6 unitless
+LPS_1 byteNumero 10 unitless
+LPS_1 dioName loaderPlutoGateway unitless (final)
+LPS_1 inputNumero 7 unitless
+LRH_0 byteNumero 10 unitless
+LRH_0 dioName loaderPlutoGateway unitless (final)
+LRH_0 inputNumero 4 unitless
+LRH_1 byteNumero 10 unitless
+LRH_1 dioName loaderPlutoGateway unitless (final)
+LRH_1 inputNumero 5 unitless
+acAF0b byteNumero 11 unitless
+acAF0b dioName loaderPlutoGateway unitless (final)
+acAF0b inputNumero 3 unitless
+acAF0s byteNumero 11 unitless
+acAF0s dioName loaderPlutoGateway unitless (final)
+acAF0s inputNumero 2 unitless
+acAF1b byteNumero 11 unitless
+acAF1b dioName loaderPlutoGateway unitless (final)
+acAF1b inputNumero 5 unitless
+acAF1s byteNumero 11 unitless
+acAF1s dioName loaderPlutoGateway unitless (final)
+acAF1s inputNumero 4 unitless
+acAF3b byteNumero 11 unitless
+acAF3b dioName loaderPlutoGateway unitless (final)
+acAF3b inputNumero 7 unitless
+acAF3s byteNumero 11 unitless
+acAF3s dioName loaderPlutoGateway unitless (final)
+acAF3s inputNumero 6 unitless
+acAP2b byteNumero 11 unitless
+acAP2b dioName loaderPlutoGateway unitless (final)
+acAP2b inputNumero 1 unitless
+acAP2s byteNumero 11 unitless
+acAP2s dioName loaderPlutoGateway unitless (final)
+acAP2s inputNumero 0 unitless
+clampedStatusSensor byteNumero 6 unitless
+clampedStatusSensor dioName loaderPlutoGateway unitless (final)
+clampedStatusSensor inputNumero 4 unitless
+forceSensor0 byteNumero 4 unitless
+forceSensor0 deviceName loaderPlutoGateway unitless
+forceSensor1 byteNumero 8 unitless
+forceSensor1 deviceName loaderPlutoGateway unitless
+keyEng byteNumero 10 unitless
+keyEng dioName loaderPlutoGateway unitless (final)
+keyEng inputNumero 2 unitless
+keyEngb byteNumero 10 unitless
+keyEngb dioName loaderPlutoGateway unitless (final)
+keyEngb inputNumero 3 unitless
+keyLock byteNumero 10 unitless
+keyLock dioName loaderPlutoGateway unitless (final)
+keyLock inputNumero 0 unitless
+keyLockb byteNumero 10 unitless
+keyLockb dioName loaderPlutoGateway unitless (final)
+keyLockb inputNumero 1 unitless
+loaderCarrierRelayStatus byteNumero 6 unitless
+loaderCarrierRelayStatus dioName loaderPlutoGateway unitless (final)
+loaderCarrierRelayStatus inputNumero 6 unitless
+loaderChainPresenceSensor byteNumero 7 unitless
+loaderChainPresenceSensor dioName loaderPlutoGateway unitless (final)
+loaderChainPresenceSensor inputNumero 5 unitless
+loaderCloseSensor1 byteNumero 2 unitless
+loaderCloseSensor1 dioName loaderPlutoGateway unitless (final)
+loaderCloseSensor1 inputNumero 4 unitless
+loaderCloseSensor2 byteNumero 2 unitless
+loaderCloseSensor2 dioName loaderPlutoGateway unitless (final)
+loaderCloseSensor2 inputNumero 5 unitless
+loaderCloseSensor3 byteNumero 2 unitless
+loaderCloseSensor3 dioName loaderPlutoGateway unitless (final)
+loaderCloseSensor3 inputNumero 6 unitless
+loaderCloseSensor4 byteNumero 2 unitless
+loaderCloseSensor4 dioName loaderPlutoGateway unitless (final)
+loaderCloseSensor4 inputNumero 7 unitless
+loaderDefaultStatus byteNumero 7 unitless
+loaderDefaultStatus dioName loaderPlutoGateway unitless (final)
+loaderDefaultStatus inputNumero 6 unitless
+loaderEngagedPositionSensor0 byteNumero 3 unitless
+loaderEngagedPositionSensor0 dioName loaderPlutoGateway unitless (final)
+loaderEngagedPositionSensor0 inputNumero 6 unitless
+loaderEngagedPositionSensor1 byteNumero 3 unitless
+loaderEngagedPositionSensor1 dioName loaderPlutoGateway unitless (final)
+loaderEngagedPositionSensor1 inputNumero 7 unitless
+loaderFilterGoodPositionStatus byteNumero 7 unitless
+loaderFilterGoodPositionStatus dioName loaderPlutoGateway unitless (final)
+loaderFilterGoodPositionStatus inputNumero 7 unitless
+loaderFilterPresenceSensor0 byteNumero 3 unitless
+loaderFilterPresenceSensor0 dioName loaderPlutoGateway unitless (final)
+loaderFilterPresenceSensor0 inputNumero 0 unitless
+loaderFilterPresenceSensor1 byteNumero 3 unitless
+loaderFilterPresenceSensor1 dioName loaderPlutoGateway unitless (final)
+loaderFilterPresenceSensor1 inputNumero 1 unitless
+loaderHandoffPositionSensor0 byteNumero 6 unitless
+loaderHandoffPositionSensor0 dioName loaderPlutoGateway unitless (final)
+loaderHandoffPositionSensor0 inputNumero 0 unitless
+loaderHandoffPositionSensor1 byteNumero 6 unitless
+loaderHandoffPositionSensor1 dioName loaderPlutoGateway unitless (final)
+loaderHandoffPositionSensor1 inputNumero 1 unitless
+loaderHooksRelayStatus byteNumero 6 unitless
+loaderHooksRelayStatus dioName loaderPlutoGateway unitless (final)
+loaderHooksRelayStatus inputNumero 7 unitless
+loaderOnCameraSensor0 byteNumero 3 unitless
+loaderOnCameraSensor0 dioName loaderPlutoGateway unitless (final)
+loaderOnCameraSensor0 inputNumero 2 unitless
+loaderOnCameraSensor1 byteNumero 3 unitless
+loaderOnCameraSensor1 dioName loaderPlutoGateway unitless (final)
+loaderOnCameraSensor1 inputNumero 3 unitless
+loaderOpenSensor1 byteNumero 2 unitless
+loaderOpenSensor1 dioName loaderPlutoGateway unitless (final)
+loaderOpenSensor1 inputNumero 0 unitless
+loaderOpenSensor2 byteNumero 2 unitless
+loaderOpenSensor2 dioName loaderPlutoGateway unitless (final)
+loaderOpenSensor2 inputNumero 1 unitless
+loaderOpenSensor3 byteNumero 2 unitless
+loaderOpenSensor3 dioName loaderPlutoGateway unitless (final)
+loaderOpenSensor3 inputNumero 2 unitless
+loaderOpenSensor4 byteNumero 2 unitless
+loaderOpenSensor4 dioName loaderPlutoGateway unitless (final)
+loaderOpenSensor4 inputNumero 3 unitless
+loaderStoragePositionSensor0 byteNumero 3 unitless
+loaderStoragePositionSensor0 dioName loaderPlutoGateway unitless (final)
+loaderStoragePositionSensor0 inputNumero 4 unitless
+loaderStoragePositionSensor1 byteNumero 3 unitless
+loaderStoragePositionSensor1 dioName loaderPlutoGateway unitless (final)
+loaderStoragePositionSensor1 inputNumero 5 unitless
+overClampedStatusSensor byteNumero 6 unitless
+overClampedStatusSensor dioName loaderPlutoGateway unitless (final)
+overClampedStatusSensor inputNumero 5 unitless
+unclampedStatusSensor byteNumero 6 unitless
+unclampedStatusSensor dioName loaderPlutoGateway unitless (final)
+unclampedStatusSensor inputNumero 2 unitless
+underClampedStatusSensor byteNumero 6 unitless
+underClampedStatusSensor dioName loaderPlutoGateway unitless (final)
+underClampedStatusSensor inputNumero 3 unitless
+
+Category : nodeID
+carrierController nodeID 90 index (final)
+hooksController nodeID 91 index (final)
+loaderPlutoGateway nodeID 5 index (final)
+
+Category : readRate
+carrier readSensorsRate 250 
+clamp readSensorsRate 250 
+
+
