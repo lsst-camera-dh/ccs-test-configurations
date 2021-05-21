@@ -1,4 +1,4 @@
-Configuring groofy for Autochanger standalone
+Configuring groovy for Autochanger standalone
 Building Main class: class org.lsst.ccs.subsystems.fcs.AutochangerMain
 
 filterManager

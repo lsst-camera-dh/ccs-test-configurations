@@ -1,4 +1,4 @@
-Configuring groofy for Carousel standalone
+Configuring groovy for Carousel standalone
 Building Main class: class org.lsst.ccs.subsystems.fcs.CarouselMain
 
 filterManager

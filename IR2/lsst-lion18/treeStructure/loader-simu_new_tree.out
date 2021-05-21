@@ -1,4 +1,4 @@
-Configuring groofy for Loader standalone
+Configuring groovy for Loader standalone
 Building Main class: class org.lsst.ccs.subsystems.fcs.LoaderMain
 
 loaderTcpProxy
@@ -43,11 +43,6 @@ loader/loaderFilterPresenceSensors/loaderFilterPresenceSensor1
 loader/loaderOnCameraSensors
 loader/loaderOnCameraSensors/loaderOnCameraSensor0
 loader/loaderOnCameraSensors/loaderOnCameraSensor1
-loader/loaderCarrierRelayStatus
-loader/loaderHooksRelayStatus
-loader/loaderChainPresenceSensor
-loader/loaderDefaultStatus
-loader/loaderFilterGoodPositionStatus
 loader/keyLockSensors
 loader/keyLockSensors/keyLock
 loader/keyLockSensors/keyLockb
@@ -60,6 +55,11 @@ loader/Loader_LRH/LRH_1
 loader/Loader_LPS
 loader/Loader_LPS/LPS_0
 loader/Loader_LPS/LPS_1
+loader/loaderCarrierRelayStatus
+loader/loaderHooksRelayStatus
+loader/loaderChainPresenceSensor
+loader/loaderDefaultStatus
+loader/loaderFilterGoodPositionStatus
 loader/acAP2
 loader/acAP2/acAP2s
 loader/acAP2/acAP2b

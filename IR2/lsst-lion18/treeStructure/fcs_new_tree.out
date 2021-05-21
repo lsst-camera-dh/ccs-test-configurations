@@ -1,4 +1,4 @@
-Configuring groofy for full FCS
+Configuring groovy for full FCS
 Building Main class: class org.lsst.ccs.subsystems.fcs.FcsMain
 **** Loading the library 
 **** Done Loading the library 
@@ -249,11 +249,6 @@ loader/loaderFilterPresenceSensors/loaderFilterPresenceSensor1
 loader/loaderOnCameraSensors
 loader/loaderOnCameraSensors/loaderOnCameraSensor0
 loader/loaderOnCameraSensors/loaderOnCameraSensor1
-loader/loaderCarrierRelayStatus
-loader/loaderHooksRelayStatus
-loader/loaderChainPresenceSensor
-loader/loaderDefaultStatus
-loader/loaderFilterGoodPositionStatus
 loader/keyLockSensors
 loader/keyLockSensors/keyLock
 loader/keyLockSensors/keyLockb
@@ -266,6 +261,11 @@ loader/Loader_LRH/LRH_1
 loader/Loader_LPS
 loader/Loader_LPS/LPS_0
 loader/Loader_LPS/LPS_1
+loader/loaderCarrierRelayStatus
+loader/loaderHooksRelayStatus
+loader/loaderChainPresenceSensor
+loader/loaderDefaultStatus
+loader/loaderFilterGoodPositionStatus
 loader/acAP2
 loader/acAP2/acAP2s
 loader/acAP2/acAP2b
