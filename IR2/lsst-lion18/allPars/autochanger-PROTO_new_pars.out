@@ -39,7 +39,6 @@ onlineClampXplusController serialNB 79011616 unitless
 onlineClampYminusController serialNB 79011243 unitless
 onlineStrainGauge serialNB 0 unitless
 proximitySensorsDevice serialNB c7c60331 unitless
-tempSensorsDevice serialNB _null_ unitless
 tempSensorsDevice1 serialNB 4bb6b unitless
 tempSensorsDevice2 serialNB 19VE0076 unitless
 
@@ -444,7 +443,6 @@ onlineClampXplusController nodeID 48 index (final)
 onlineClampYminusController nodeID 50 index (final)
 onlineStrainGauge nodeID 33 index (final)
 proximitySensorsDevice nodeID 34 index (final)
-tempSensorsDevice nodeID 0 index (final)
 tempSensorsDevice1 nodeID 32 index (final)
 tempSensorsDevice2 nodeID 75 index (final)
 

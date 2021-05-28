@@ -23,7 +23,6 @@ tcpProxy/onlineClampXminusController
 tcpProxy/onlineClampXplusController
 tcpProxy/onlineClampYminusController
 tcpProxy/brakeSystemGateway
-tcpProxy/tempSensorsDevice
 tcpProxy/tempSensorsDevice1
 tcpProxy/tempSensorsDevice2
 tcpProxy/proximitySensorsDevice
