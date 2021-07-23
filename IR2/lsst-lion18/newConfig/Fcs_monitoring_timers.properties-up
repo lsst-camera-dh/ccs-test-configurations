@@ -1,0 +1,7 @@
+agentMonitorService/taskPeriodMillis = 1000
+heartbeat/taskPeriodMillis = 1000
+main-updateGui/taskPeriodMillis = 1000
+monitor-check/taskPeriodMillis = 1000
+monitor-publish/taskPeriodMillis = 1000
+monitor-update/taskPeriodMillis = 1000
+runtimeInfo/taskPeriodMillis = 1000
