@@ -17,8 +17,6 @@ Properties buildProperties = buildProperties();
 FocalPlane focalPlane = new FocalPlane(buildProperties.getProperty("org.lsst.ccs.subsystem.focal.plane.rafts","[R10:[ccdType:itl],R22:[ccdType:itl]]"));
 
 Properties props = BootstrapResourceUtils.getBootstrapSystemProperties()
-def focalPlaneName = props.getProperty("org.lsst.ccs.application.name","focal-plane");
-
 def partition = props.getProperty("org.lsst.ccs.raft.partition","2raft")
 
 builder.
@@ -29,17 +27,9 @@ builder.
         instrumentConfig(InstrumentConfig)
         imageCoordinatorService(ImageCoordinatorService)
     
-        imageNameService (ImageNameService, 
-            dbURL: props.getProperty("org.lsst.ccs.dbUrl", "jdbc:h2:mem:test;MODE=MYSQL"), 
-            source: "MainCamera",
-            controller: "CCS", 
-            timeZoneId: "America/Los_Angeles",
-            offset: java.time.Duration.ZERO
-        )
+        imageNameService (ImageNameService)
         
-        imageDatabaseService ( ImageDatabaseService, 
-            dbURL: props.getProperty("org.lsst.ccs.dbUrl", "jdbc:h2:mem:test;MODE=MYSQL") 
-        )
+        imageDatabaseService (ImageDatabaseService)
 
     for (Raft raftGeometry : focalPlane.getChildrenList() ) {
         System.out.println("Looping on Raft "+raftGeometry.getName());
@@ -47,9 +37,7 @@ builder.
         def boolean isCornerRaft = raftGeometry instanceof CornerRaft;
 
         def tempControl = raftGeometry.getName()+"/TempControl";        
-        rebs = isCornerRaft ? ["RebW"] : ["Reb0","Reb2"]
-        tempChans = isCornerRaft ? ["RebW/SW/Temp"] : ["Reb0/S01/Temp", "Reb1/S11/Temp"];
-        "$tempControl" (TempControl, raftPath:raftGeometry.getName()+"/", rebs:rebs, tempChans:tempChans)
+        "$tempControl" (TempControl, raftPath:raftGeometry.getName()+"/")
 
         int rebPosition = 0;    
         for (Reb rebGeometry : raftGeometry.getRebs() ) {
@@ -60,7 +48,7 @@ builder.
 
             System.out.println("Using Reb Id "+rebCount+" "+reb+" "+rebGeometry.getUniqueId() );
             
-            "$reb" (REBDevice, id:rebCount, ifcName:partition, processImages: false) {
+            "$reb" (REBDevice, ifcName:partition, processImages: false) {
 
                 //"DAC" (DacControl, raw: true, version: 2)   // Science raft REBs, raw DAC values
                 "DAC" (DacControl) // All REBs, physical values
@@ -83,16 +71,16 @@ builder.
                     if ( j == 1 || j == 2 ) {                
                         "Temp$j" (Channel, description: "${title}Board temperature $j", units: "\u00b0C",
                                 hwChan: j - 1, type: "TEMP", 
-                                checkLo:"alarm", limitLo:10.0, dbandLo:5.0, alarmLo:"$reb/RebBoardTemperatureLowLimit",
-                                checkHi:"alarm", limitHi:45, dbandHi:5.0, alarmHi:"$reb/RebBoardTemperatureHighLimit")
+                                checkLo:"alarm", alarmLo:"$reb/RebBoardTemperatureLowLimit",
+                                checkHi:"alarm", alarmHi:"$reb/RebBoardTemperatureHighLimit")
                     } else {
                         "Temp$j" (Channel, description: "${title}Board temperature $j", units: "\u00b0C",
-                                hwChan: j - 1, type: "TEMP", 
-                                checkLo:"flag", limitLo:10.0, dbandLo:5.0,
-                                checkHi:"flag", limitHi:45, dbandHi:5.0)                
+                                hwChan: j - 1, type: "TEMP", checkLo:"flag", checkHi:"flag")                
                     }
                     title = ""
                 }
+
+                // Hacked as a workaround for LSSTCCSRAFTS-527 -- better fix needed
 
                 if ( ! isCornerRaft ) {
                     "AspicU/Temp0" (Channel, description: "ASPIC 0 upper temp", units: "\u00b0C",
@@ -319,7 +307,7 @@ builder.
 
                 }
 
-                def int nAspic = isCornerRaft ? (isRebW ? 1 : 2) : 2;
+                def int nAspic = isCornerRaft ? (rebGeometry.isAuxtelREB()? 2 : (isRebW ? 1 : 2)) : 2;
                 for (CCD ccdGeometry : rebGeometry.getCCDs() ) {
                     def js = ccdGeometry.getSerialPosition();
 
