@@ -48,7 +48,7 @@ builder.
 
             System.out.println("Using Reb Id "+rebCount+" "+reb+" "+rebGeometry.getUniqueId() );
             
-            "$reb" (REBDevice, ifcName:partition, processImages: false) {
+            "$reb" (REBDevice, id:rebCount, ifcName:partition, processImages: false) {
 
                 //"DAC" (DacControl, raw: true, version: 2)   // Science raft REBs, raw DAC values
                 "DAC" (DacControl) // All REBs, physical values
