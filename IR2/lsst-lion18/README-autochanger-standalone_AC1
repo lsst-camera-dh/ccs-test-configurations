@@ -1,0 +1,33 @@
+# les valeurs des courants pour les onlineClamps ont été perdues par le précédent changement de Toolkit
+# quand on est passé avec des fichiers _safe
+Pour récupérer ces valeurs, je me suis basée sur les valeurs de la dernière fois que l'autochanger a bien marché avec le fcs :
+cp /Users/virieux/lsst/CameraControl/SLAC_CONFIGURATION/ccs-test-configurations/IR2/lsst-lion18/fcs_defaultInitial_onlineClampCurrent.properties autochanger-standalone_AC1__onlineClampCurrent.properties
+
+# Avec le changement de Toolkit -> 5.4 (ou avant), des paramètres ont été ajoutés, ils ont été ajoutés dans 
+autochanger-standalone_AC1_defaultInitial.properties 
+#mais ce fichier contient des valeurs erronées qui ont été copiées depuis le code 
+
+# Mais quand on a modifié des valeurs de paramètres, ces nouvelles valeurs ont été sauvegardées par saveAllChanges dans autochanger-standalone_AC1.properties
+# de sorte qu'on a de bonnes valeurs de paramètres dans autochanger-standalone_AC1.properties mais tous les paramètres dans autochanger-standalone_AC1_defaultInitial.properties 
+# j'ai donc écrit un script : compareParameters.py (sur gitlab : https://gitlab.in2p3.fr/virieux/fcs_scripts)
+# Puis j'ai comparé les 2 fichisers pour prendre les valeurs de paramètres de autochanger-standalone_AC1.properties et les nouveaux paramètres de autochanger-standalone_AC1_defaultInitial.properties:
+
+python compareParameters.py ~/tmp/ autochanger-standalone_AC1.properties autochanger-standalone_AC1_defaultInitial.properties autochanger-standalone_AC1.new
+
+#cf sortie de compareParameters.py : compareParameters.out
+
+#Ensuite :
+
+cp autochanger-standalone_AC1.new autochanger-standalone_AC1_defaultInitial.properties 
+cp autochanger-standalone_AC1_defaultInitial.properties /Users/virieux/lsst/CameraControl/SLAC_CONFIGURATION/ccs-test-configurations/IR2/lsst-lion18/
+
+#Puis recreation des fichiers de config de autochanger1 :
+cd wordkir; rm autochanger1*
+cd fcs_scripts; sh create_new_config_files.sh autochanger AC1 /Users/virieux/lsst/CameraControl/SLAC_CONFIGURATION/ccs-test-configurations/IR2/lsst-lion18
+
+#Puis copie sur SLAC_CONFIG :
+cd workdir; cp autochanger1* /Users/virieux/lsst/CameraControl/SLAC_CONFIGURATION/ccs-test-configurations/IR2/lsst-lion18
+
+
+
+
