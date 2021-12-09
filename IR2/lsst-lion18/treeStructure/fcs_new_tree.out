@@ -26,8 +26,8 @@ tcpProxy/ai814
 tcpProxy/pt100
 tcpProxy/acSensorsGateway
 tcpProxy/onlineStrainGauge
-tcpProxy/linearRailMasterController
-tcpProxy/linearRailSlaveController
+tcpProxy/acTruckXplusController
+tcpProxy/acTruckXminusController
 tcpProxy/latchXminusController
 tcpProxy/latchXplusController
 tcpProxy/onlineClampXminusController
