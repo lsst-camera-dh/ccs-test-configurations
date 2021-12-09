@@ -1,4 +1,4 @@
-system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/25raft/:../etc/:~/ccs/etc/:/etc/ccs/
+system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/run5/:../etc/:~/ccs/etc/:/etc/ccs/
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description FocalPlane --alias focal-plane --initialConfiguration "\
    DAQ:common|<instrument>|<instrument>-<site>,\
@@ -9,10 +9,10 @@ org.lsst.ccs.application.args=--description FocalPlane --alias focal-plane --ini
    Limits:<instrument>,\
    RaftsLimits:<instrument>,\
    RaftTempControl:<instrument>,\
-   RaftTempControlStatus:<instrument>|<instrument>-off,\
+   RaftTempControlStatus:<instrument>|<instrument>-on,\
    Rafts:<instrument>,\
    RaftsPower:<instrument>,\
-   Sequencer:common|v25,\
+   Sequencer:common|run5,\
    build:<instrument>,\
    Visualization:<site>,\
    timers:<instrument>" 
