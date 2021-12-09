@@ -13,8 +13,8 @@ tcpProxy
 tcpProxy/canInterface
 tcpProxy/acSensorsGateway
 tcpProxy/onlineStrainGauge
-tcpProxy/linearRailMasterController
-tcpProxy/linearRailSlaveController
+tcpProxy/acTruckXminusController
+tcpProxy/acTruckXplusController
 tcpProxy/latchXminusController
 tcpProxy/latchXplusController
 tcpProxy/onlineClampXminusController
