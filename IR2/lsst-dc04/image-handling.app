@@ -8,4 +8,4 @@ org.lsst.ccs.application.description=Run the Image Handling Subsystem (<host>)
 org.lsst.ccs.subsystem.agent.property.group=camera
 org.lsst.ccs.config.remote=true
 system.property.org.lsst.ccs.subsystem.imagehandling.FitsTimeoutSeconds=60
-system.option.-add-opens=java.base/java.util=ALL-UNNAMED
+system.option.-add-opens\=java.base/java.util\=ALL-UNNAMED
