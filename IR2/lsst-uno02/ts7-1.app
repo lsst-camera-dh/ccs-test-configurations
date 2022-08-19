@@ -6,5 +6,9 @@ org.lsst.ccs.application.args=\
                         Limits:defaultInitial|ts7-1|ts7-1-ops,\
                         General:defaultInitial|<alias>,\
                         timers:defaultInitial|<alias>,\
-                        Devices:defaultInitial
+                        Devices:defaultInitial,\
+			InfluxDb:<cluster>
+
+org.lsst.ccs.use.influxdb.service=true
+
 
