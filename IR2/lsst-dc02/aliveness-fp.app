@@ -1,4 +1,4 @@
-system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/25raft/:../etc/:~/ccs/etc/:/etc/ccs/
+system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/25raft/|../etc/|~/ccs/etc/|/etc/ccs/
 system.pre-execute=daqv4-setup
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description FocalPlaneSubsystem --alias aliveness-fp --initialConfiguration "build:<instrument>,DAQ:<instrument>,Devices:<instrument>,General:<instrument>,HardwareId:<instrument>,Instrument:<instrument>,Limits:<instrument>,RaftsLimits:<instrument>,RaftsPower:<instrument>,Rafts:<instrument>,RaftTempControl:<instrument>,RaftTempControlStatus:<instrument>,Sequencer:<instrument>,Services:<instrument>,timers:<instrument>,Visualization:<instrument>"

@@ -1,4 +1,4 @@
-system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/run5/:../etc/:~/ccs/etc/:/etc/ccs/
+system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/run5/|../etc/|~/ccs/etc/|/etc/ccs/
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description FocalPlane --alias focal-plane --initialConfiguration "\
    DAQ:common|<instrument>|<instrument>-<site>,\
