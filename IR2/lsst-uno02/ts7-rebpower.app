@@ -1,8 +1,7 @@
 org.lsst.ccs.application.description=Control the REB power supply
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=\
- --description RebPowerSupply\
- --alias ts7-rebpower\
+ --description RebPowerSupply --alias ts7-rebpower \
  --initialConfiguration build:<alias>,\
                         Limits:<alias>,\
                         Power:<alias>,\
