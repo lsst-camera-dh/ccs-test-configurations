@@ -85,34 +85,34 @@ builder.
                 if ( ! isCornerRaft ) {
                     "AspicU/Temp0" (Channel, description: "ASPIC 0 upper temp", units: "\u00b0C",
                             hwChan: 0, type: "ATEMP", 
-                            checkLo:"flag", limitLo:10.0, dbandLo:5.0/*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
-                            checkHi:"flag", limitHi:45, dbandHi:5.0/*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
+                            checkLo:"flag" /*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
+                            checkHi:"flag" /*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
 
                     "AspicL/Temp0" (Channel, description: "ASPIC 0 lower temp", units: "\u00b0C",
                             hwChan: 1, type: "ATEMP", 
-                            checkLo:"flag", limitLo:10.0, dbandLo:5.0/*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
-                            checkHi:"flag", limitHi:45, dbandHi:5.0/*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
+                            checkLo:"flag" /*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
+                            checkHi:"flag" /*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
 
                     "AspicU/Temp1" (Channel, description: "ASPIC 1 upper temp", units: "\u00b0C",
                                 hwChan: 2, type: "ATEMP", 
-                                checkLo:"flag", limitLo:10.0, dbandLo:5.0/*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
-                                checkHi:"flag", limitHi:45, dbandHi:5.0/*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
+                                checkLo:"flag" /*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
+                                checkHi:"flag" /*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
 
                     "AspicL/Temp1" (Channel, description: "ASPIC 1 lower temp", units: "\u00b0C",
                                 hwChan: 3, type: "ATEMP", 
-                                checkLo:"flag", limitLo:10.0, dbandLo:5.0/*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
-                                checkHi:"flag", limitHi:45, dbandHi:5.0/*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
+                                checkLo:"flag" /*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
+                                checkHi:"flag" /*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
 
 
                     "AspicU/Temp2" (Channel, description: "ASPIC 2 upper temp", units: "\u00b0C",
                                     hwChan: 4, type: "ATEMP", 
-                                    checkLo:"flag", limitLo:10.0, dbandLo:5.0/*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
-                                    checkHi:"flag", limitHi:45, dbandHi:5.0/*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
+                                    checkLo:"flag" /*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
+                                    checkHi:"flag" /*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
 
                     "AspicL/Temp2" (Channel, description: "ASPIC 2 lower temp", units: "\u00b0C",
                                     hwChan: 5, type: "ATEMP", 
-                                    checkLo:"flag", limitLo:10.0, dbandLo:5.0/*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
-                                    checkHi:"flag", limitHi:45, dbandHi:5.0/*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
+                                    checkLo:"flag" /*, alarmLo:"$reb/RebAspicTemperatureLowLimit"*/,
+                                    checkHi:"flag" /*, alarmHi:"$reb/RebAspicTemperatureHighLimit"*/)
                 }
 
 

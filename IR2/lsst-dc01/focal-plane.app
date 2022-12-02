@@ -10,9 +10,9 @@ org.lsst.ccs.application.args=--description FocalPlane --alias focal-plane --ini
    RaftsLimits:<instrument>,\
    RaftTempControl:<instrument>,\
    RaftTempControlStatus:<instrument>|<instrument>-on,\
-   Rafts:<instrument>,\
+   Rafts:<instrument>|<instrument>-emu,\
    RaftsPower:<instrument>,\
-   Sequencer:common|run5,\
+   Sequencer:common|v26,\
    build:<instrument>,\
    Visualization:<site>,\
    timers:<instrument>" 
