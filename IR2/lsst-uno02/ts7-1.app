@@ -9,6 +9,3 @@ org.lsst.ccs.application.args=\
                         Devices:defaultInitial,\
 			InfluxDb:<cluster>
 
-org.lsst.ccs.use.influxdb.service=true
-
-
