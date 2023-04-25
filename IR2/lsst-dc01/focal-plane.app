@@ -3,7 +3,7 @@ org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description FocalPlane --alias focal-plane --initialConfiguration "\
    DAQ:common|<instrument>|<instrument>-<site>,\
    Devices:<instrument>,\
-   General:common|<instrument>|<instrument>-<site>,\
+   General:common|playback|<instrument>|<instrument>-<site>,\
    HardwareId:<instrument>,\
    Instrument:<instrument>|<instrument>-<site>,\
    Limits:<instrument>,\
