@@ -1,5 +1,4 @@
 FILTER      String ${ts8-bench/ColorFWheel/filterName|unspecified}   Color filter name from Flat Field Projector
-#FILTER2     String ${ts8-bench/NeutralFWheel/filterName|unspecified} Neutral density filter name from Flat Field Projector
 FILTER2     String  ${CCOBLED|_NULL_}  	 CCOB LED when CCOB wide is used
 FILTER3    Float   ${TGTFLUX|_NULL_}	CCOB target flux
 STAGEX     Float ${ts8-motorplatform/AxisStatus/X/position} X stage position
