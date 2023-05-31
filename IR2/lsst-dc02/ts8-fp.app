@@ -1,11 +1,10 @@
-system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/run5/|../etc/|~/ccs/etc/|/etc/ccs/
-system.pre-execute=daqv5-setup
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description FocalPlane --alias ts8-fp --initialConfiguration "\
         build:<instrument>,\
-        DAQ:<instrument>,\
+        DAQ:<instrument>(2),\
         Devices:<instrument>,\
         General:<instrument>,\
+        Guider:<instrument>,\
         HardwareId:<instrument>,\
         Instrument:<instrument>,\
         Limits:<instrument>,\

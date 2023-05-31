@@ -3,14 +3,15 @@ org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description FocalPlane --alias focal-plane --initialConfiguration "\
    DAQ:common|<instrument>|<instrument>-<site>,\
    Devices:<instrument>,\
-   General:common|playback|<instrument>|<instrument>-<site>,\
+   General:common|<instrument>|<instrument>-<site>,\
+   Guider:camera-guiding,\
    HardwareId:<instrument>,\
    Instrument:<instrument>|<instrument>-<site>,\
    Limits:<instrument>,\
    RaftsLimits:<instrument>,\
    RaftTempControl:<instrument>,\
-   RaftTempControlStatus:<instrument>|<instrument>-on,\
-   Rafts:<instrument>|<instrument>-emu,\
+   RaftTempControlStatus:<instrument>|<instrument>-off,\
+   Rafts:<instrument>,\
    RaftsPower:<instrument>,\
    Sequencer:common|v26,\
    build:<instrument>,\

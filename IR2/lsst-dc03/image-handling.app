@@ -2,7 +2,8 @@ org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--alias image-handling-<host> --description ImageHandling  --initialConfiguration "\
     build:<host>,\
     General:defaultInitial|<host>,\
-    Commands:common|<instrument>,\
+    Guider:noGuiding,\
+    Commands:common|<instrument>|<instrument>-primary,\
     DAQ:common|<instrument>|<host>,\
     FitsHandling:common|ccob|<host>" 
 org.lsst.ccs.application.description=Run the Image Handling Subsystem (<host>)
