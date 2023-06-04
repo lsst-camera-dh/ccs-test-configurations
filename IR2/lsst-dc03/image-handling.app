@@ -3,7 +3,7 @@ org.lsst.ccs.application.args=--alias image-handling-<host> --description ImageH
     build:<host>,\
     General:defaultInitial|<host>,\
     Guider:noGuiding,\
-    Commands:common|<instrument>|<instrument>-primary,\
+    Commands:common|<instrument>,\
     DAQ:common|<instrument>|<host>,\
     FitsHandling:common|ccob|<host>" 
 org.lsst.ccs.application.description=Run the Image Handling Subsystem (<host>)
