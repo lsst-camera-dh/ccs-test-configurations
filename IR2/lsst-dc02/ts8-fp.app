@@ -3,9 +3,10 @@ system.pre-execute=daqv5-setup
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description FocalPlane --alias ts8-fp --initialConfiguration "\
         build:<instrument>,\
-        DAQ:<instrument>,\
+        DAQ:<instrument>(5),\
         Devices:<instrument>,\
         General:<instrument>,\
+        Guider:<instrument>,\
         HardwareId:<instrument>,\
         Instrument:<instrument>,\
         Limits:<instrument>,\
