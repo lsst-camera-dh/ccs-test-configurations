@@ -4,7 +4,7 @@ org.lsst.ccs.application.args=--description FocalPlane --alias focal-plane --ini
    DAQ:common|<instrument>|<instrument>-<site>,\
    Devices:<instrument>,\
    General:common|<instrument>|<instrument>-<site>,\
-   Guider:camera-guiding,\
+   Guider:no-guiding,\
    HardwareId:<instrument>,\
    Instrument:<instrument>|<instrument>-<site>,\
    Limits:<instrument>,\
