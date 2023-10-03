@@ -8,16 +8,16 @@ import org.lsst.ccs.subsystem.rafts.*;
 import org.lsst.ccs.drivers.reb.*;
 import org.lsst.ccs.monitor.*;
 import org.lsst.ccs.subsystem.focalplane.alerts.FocalPlaneAlertType;
-import org.lsst.ccs.subsystem.focalplane.RebTotalPower;
+import org.lsst.ccs.subsystem.common.RebTotalPower;
+import org.lsst.ccs.subsystem.common.ConfiguredAverageChannel;
 
 CCSBuilder builder = ["focal-plane"]
 
 Properties buildProperties = buildProperties();
 
-FocalPlane focalPlane = new FocalPlane(buildProperties.getProperty("org.lsst.ccs.subsystem.focal.plane.rafts","[R10:[ccdType:itl],R22:[ccdType:itl]]"));
+FocalPlane focalPlane = new FocalPlane(buildProperties.getProperty("org.lsst.ccs.subsystem.focal.plane.rafts",""));
 
 Properties props = BootstrapResourceUtils.getBootstrapSystemProperties()
-def partition = props.getProperty("org.lsst.ccs.raft.partition","2raft")
 
 builder.
     "main" (FocalPlaneSubsystem, geometry:focalPlane) {
@@ -26,6 +26,7 @@ builder.
         webHooksConfig(WebHooksConfig)
         instrumentConfig(InstrumentConfig)
         imageCoordinatorService(ImageCoordinatorService)
+        monitoringConfig (MonitoringConfig)
     
         imageNameService (ImageNameService)
         
@@ -48,7 +49,7 @@ builder.
 
             System.out.println("Using Reb Id "+rebCount+" "+reb+" "+rebGeometry.getUniqueId() );
             
-            "$reb" (REBDevice, id:rebCount, ifcName:partition) {
+            "$reb" (REBDevice, id:rebCount) {
 
                 //"DAC" (DacControl, raw: true, version: 2)   // Science raft REBs, raw DAC values
                 "DAC" (DacControl) // All REBs, physical values
@@ -354,4 +355,6 @@ builder.
     }
 
     "RebTotalPower" (RebTotalPower, description:"Reb Total Power", units:"Watts")
+
+    "RebsAverageTemp6" (ConfiguredAverageChannel, description: "Average Rebs Temp6", units: "\u00b0C")
 }
