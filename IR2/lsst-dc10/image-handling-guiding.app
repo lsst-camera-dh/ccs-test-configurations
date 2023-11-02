@@ -4,7 +4,7 @@ org.lsst.ccs.application.args=--alias image-handling-<host> --description ImageH
     General:defaultInitial|<host>,\
     Guider:<instrument>-guiding,\
     Commands:common|<instrument>,\
-    DAQ:common|<instrument>|<host>,\
+    DAQ:common|<instrument>|<host>(3),\
     FitsHandling:common|ccob|<host>" 
 org.lsst.ccs.application.description=Run the Image Handling Subsystem (<host>)
 org.lsst.ccs.subsystem.agent.property.group=camera
