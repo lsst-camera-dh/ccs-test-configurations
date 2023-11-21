@@ -17,7 +17,8 @@ org.lsst.ccs.application.args=--description FocalPlane --alias ts8-fp --initialC
         RaftTempControlStatus:<instrument>,\
         Sequencer:<instrument>,\
         timers:<instrument>,\
-        Visualization:<instrument>"
+        Visualization:<instrument>,\
+        Monitoring:<instrument>"
 org.lsst.ccs.application.description=Run the FocalPlane Subsystem
 org.lsst.ccs.ld.library.path=Daq4
 org.lsst.ccs.raft.partition=ts8
