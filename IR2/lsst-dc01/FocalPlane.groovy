@@ -118,7 +118,7 @@ builder.
 
 
                 "HVBiasSwitch"  (Channel, description: "HV bias switch", format: ".0f",
-                            hwChan: 0, type: "HVSWCH")
+                            hwChan: 0, type: "HVSWCH", units: "unitless")
 
 
                 if ( isRebW ) {
