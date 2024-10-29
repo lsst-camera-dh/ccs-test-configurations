@@ -1,3 +1,6 @@
+# Persistence files
+IR2/lsst-lion18/persist*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
