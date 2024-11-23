@@ -5,6 +5,7 @@ org.lsst.ccs.application.args=\
  --initialConfiguration build:<alias>,\
                         Limits:<alias>,\
                         Power:<alias>,\
+			HVRegulation:<alias>,\
                         General:<alias>,\
                         timers:<alias>,\
                         Devices:<alias>
