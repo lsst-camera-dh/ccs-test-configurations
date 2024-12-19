@@ -1,6 +1,6 @@
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--alias ts8-ih --description ImageHandling --initialConfiguration "\
-   General:<instrument>(13),\
+   General:<instrument>,\
    Guider:noGuiding,\
    DAQ:common|<instrument>,\
    build:common|<instrument>,\
