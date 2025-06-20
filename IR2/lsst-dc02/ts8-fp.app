@@ -1,4 +1,4 @@
-system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/run7/|../etc/|~/ccs/etc/|/etc/ccs/
+system.property.org.lsst.ccs.resource.path=/home/ccs/projects/sequencer-files/commissioning/|../etc/|~/ccs/etc/|/etc/ccs/
 system.pre-execute=daqv5-setup
 org.lsst.ccs.application.mainClass=org.lsst.ccs.startup.SubsystemBoot
 org.lsst.ccs.application.args=--description FocalPlane --alias ts8-fp --initialConfiguration "\
@@ -15,7 +15,7 @@ org.lsst.ccs.application.args=--description FocalPlane --alias ts8-fp --initialC
         Rafts:<instrument>|ts8-odP269,\
         RaftTempControl:<instrument>,\
         RaftTempControlStatus:<instrument>,\
-        Sequencer:<instrument>,\
+        Sequencer:<instrument>-idleClear,\
         timers:<instrument>,\
         Visualization:<instrument>,\
         Monitoring:<instrument>"

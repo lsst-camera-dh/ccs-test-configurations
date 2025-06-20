@@ -10,3 +10,4 @@ org.lsst.ccs.application.description=Run the Image Handling Subsystem (for ts8)
 org.lsst.ccs.subsystem.agent.property.group=ts8-raft
 org.lsst.ccs.subsystem.agent.property.instrument=ts8
 system.option.-add-opens\=java.base/java.util\=ALL-UNNAMED
+system.property.org.lsst.ccs.resource.path=ccs://lsst-camera-dev.slac.stanford.edu/RestFileServer/misc/spec-files-combined[spec]|../etc/|~/ccs/etc/|/etc/ccs/
