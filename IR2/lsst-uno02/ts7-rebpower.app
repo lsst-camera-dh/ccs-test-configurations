@@ -7,7 +7,8 @@ org.lsst.ccs.application.args=\
                         Power:<alias>,\
                         General:<alias>,\
                         timers:<alias>,\
-                        Devices:<alias>
+                        Devices:<alias>,\
+                        HVRegulation:<alias>
 
 org.lsst.ccs.subsystem.agent.property.group=ts8-raft
 
